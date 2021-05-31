@@ -1,5 +1,5 @@
 <h1 align="center">
-      <a href="#" alt="Dev.Finances$ (Maratona Discover)"> Templates Práticos </a>
+      <a href="#" alt="Templates Práticos"> Templates Práticos </a>
 </h1>
 
 <h3 align="center">
@@ -7,18 +7,18 @@
 </h3>
 
 <p align="center">
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/Pluto-ty/Maratona-Discover?style=flat-square">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/Pluto-ty/Praticando-templates?style=flat-square">
 
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/Pluto-ty/Maratona-Discover">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/Pluto-ty/Praticando-templates">
   
   <a href="https://github.com/Pluto-ty/README/commits/master">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Pluto-ty/Maratona-Discover">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Pluto-ty/Praticando-templates">
   </a>
     
    <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
-   <a href="https://github.com/Pluto-ty/Maratona-Discover/stargazers">
-    <img alt="Stargazers" src="https://img.shields.io/github/stars/Pluto-ty/Maratona-Discover?style=social">
-  </a>
+   <a href="https://github.com/Pluto-ty/Praticando-templates/stargazers">
+    <img alt="Stargazers" src="https://img.shields.io/github/stars/Pluto-ty/Praticando-templates?style=social">
+   </a>
   
  
 </p>
@@ -48,7 +48,7 @@ Utilizando templates prontos para reforçar conhecimentos já adquiridos e apren
 <h2 id="--features"> Recursos </h2>
 
 -  Templates separados por nível. (Apenas iniciante no momento.)
-   -  <a> Iniciante </a>
+   -  <a href="./iniciante"> Iniciante </a>
 -  Cada template separado com seu próprio readme.
 
 ---
