@@ -25,6 +25,7 @@ body {
    padding: 10px;
    background: #b07dfb;
    border-radius: 0.25em;
+   pointer-events: all;
 }
 
 /* Container Geral */
