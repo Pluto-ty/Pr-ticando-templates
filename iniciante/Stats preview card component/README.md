@@ -1,41 +1,65 @@
-## Table of contents
+<h2> Tabela de conteúdo </h2>
 
--  [Overview](#overview)
-   -  [The challenge](#the-challenge)
+-  [Visão Geral](#visão-geral)
+   -  [Desafio](#desafio)
    -  [Screenshot](#screenshot)
    -  [Links](#links)
--  [My process](#my-process)
-   -  [Built with](#built-with)
-   -  [What I learned](#what-i-learned)
-   -  [Continued development](#continued-development)
-   -  [Useful resources](#useful-resources)
--  [Author](#author)
--  [Acknowledgments](#acknowledgments)
+-  [Meu processo](#meu-processo)
+   -  [Construído com](#build-with)
+   -  [O que aprendi](#o-que-aprendi)
+-  [Autor](#autor)
 
-## Visão Geral
+<h2 id="visão-geral" align="center"> Visão Geral </h2>
 
-### O desafio
+---
 
+<br>
+<h3 id="desafio" align="center">O desafio </h3>
+<br>
+<p>
 O desafio é criar um compoente de cartão e deixar o mais próximo do design possível. Os usuários devem conseguir ver o layout, independente do tamanho da tela ou dispositivo.
+</p>
 
-### Screenshot
+<h3 id="screenshot" align="center"> Screenshot </h3>
+<img src="./images/readme/web.png" width="70%">
+<img src="./images/readme/mobile.png" width="165px">
+<br>
+<br>
 
-<img src="">
+<h3 id="links" align="center"> Links </h3>
 
-### Links
-
--  Veja Funcionand: [Abrir Página]()
+-  Veja Funcionand: [Abrir Página](https://pluto-ty.github.io/Praticando-templates/iniciante/Stats%20preview%20card%20component/index.html)
 
 -  Origem do Template: [Origem do Template](https://www.frontendmentor.io/challenges/stats-preview-card-component-8JqbgoU62)
 
-## Meu processo
+<br>
 
-### Contruido com:
+<h2 id="meu-processo" align="center"> Meu processo </h2>
+
+---
+
+<br>
+<h3 id="build-with" align="center"> Contruido com: </h3>
 
 -  Html
 -  Css ( Flexbox e BEM)
 -  Mobile-first workflow
 
-### O que usei e aprendi:
-
+<h3 id="o-que-aprendi" align="center"> O que usei e aprendi: </h3>
+<br>
+<p>
 Neste desafio utilizei flexbox para todo o layout e tentei usar pela primeira vez a técnica mobile-first estilizando todo o layout para a versão mobile e depois utilizando media queries para estilizar o layout para computadores. A minha única dúvida era como colocar o efeito de cor em cima da imagem e descobri que era usando o pseudo-elemento :after dentro da div que envolvia a imagem.
+</p>
+
+---
+
+<h2 id="autor">Autor</h2>
+
+<a href="https://github.com/Pluto-ty">
+ <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/51569984" width="100px;" alt=""/>
+</br>
+<p> Thyago Araujo <p>
+</a>
+
+[![Linkedin Badge](https://img.shields.io/badge/-ThyagoAraujo-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/thyago-araujo-m/)](https://www.linkedin.com/in/thyago-araujo-m/)
+[![Gmail Badge](https://img.shields.io/badge/-thyagoaraujomotta@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:thyagoaraujomotta@gmail.com)](mailto:thyagoaraujomotta@gmail.com)
