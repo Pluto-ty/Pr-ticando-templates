@@ -21,8 +21,8 @@ O desafio é criar um compoente de cartão e deixar o mais próximo do design po
 </p>
 
 <h3 id="screenshot" align="center"> Screenshot </h3>
-<img src="./images/readme/web.png" width="70%">
-<img src="./images/readme/mobile.png" width="165px">
+<img src="./images/readme/web.PNG" width="70%">
+<img src="./images/readme/mobile.PNG" width="165px">
 <br>
 <br>
 
