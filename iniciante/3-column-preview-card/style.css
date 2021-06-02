@@ -114,13 +114,11 @@ img {
 
 @media (max-width: 650px) {
    .c-container {
-      width: 400px;
-      margin: 90px 20px;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      width: 320px;
+      margin: 90px auto;
+      height: 1500px;
       flex-direction: column;
+      align-content: center;
    }
 
    .c-yellow-box {
