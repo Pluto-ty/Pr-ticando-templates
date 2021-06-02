@@ -1,0 +1,133 @@
+* {
+   margin: 0;
+   padding: 0;
+}
+
+.c-container {
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.u-box {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   height: 450px;
+   width: 260px;
+   padding: 20px 10px 20px 40px;
+}
+
+.u-box-2 {
+   height: 70%;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+}
+
+.c-yellow-box {
+   border-radius: 0.5em 0 0 0.5em;
+   background: hsl(31, 77%, 52%);
+}
+
+.c-yellow-box a {
+   color: hsl(31, 77%, 52%);
+}
+
+.c-yellow-box a:hover {
+   border: 0.5px solid hsl(0, 0%, 95%);
+   background: hsl(31, 77%, 52%);
+   color: hsl(0, 0%, 95%);
+   transition: 0.3s ease-in-out;
+}
+
+.c-yellow-box p {
+   max-width: 200px;
+}
+
+.c-blue-box {
+   background: hsl(184, 100%, 22%);
+}
+
+.c-blue-box p {
+   max-width: 210px;
+}
+
+.c-blue-box a {
+   color: hsl(184, 100%, 22%);
+}
+
+.c-blue-box a:hover {
+   border: 0.5px solid hsl(0, 0%, 95%);
+   background: hsl(184, 100%, 22%);
+   color: hsl(0, 0%, 95%);
+   transition: 0.3s ease-in-out;
+}
+
+.c-green-box {
+   background: hsl(179, 100%, 13%);
+   border-radius: 0 0.5em 0.5em 0;
+}
+
+.c-green-box a {
+   color: hsl(179, 100%, 13%);
+}
+
+.c-green-box a:hover {
+   border: 0.5px solid hsl(0, 0%, 95%);
+   background: hsl(179, 100%, 13%);
+   color: hsl(0, 0%, 95%);
+   transition: 0.3s ease-in-out;
+}
+
+.c-green-box p {
+   width: 210px;
+}
+
+img {
+   width: 60px;
+}
+
+.u-box h2 {
+   color: hsl(0, 0%, 95%);
+   font-family: "Big Shoulders Display", cursive;
+   font-weight: bold;
+   font-size: 40px;
+}
+
+.u-box p {
+   font-size: 15px;
+   line-height: 1.5em;
+   color: hsl(0, 0%, 95%);
+   font-family: "Lexend Deca", sans-serif;
+}
+
+.u-box a {
+   background: hsl(0, 0%, 95%);
+   border-radius: 1.5em;
+   width: 110px;
+   padding: 10px;
+   text-align: center;
+   justify-self: center;
+}
+
+@media (max-width: 650px) {
+   .c-container {
+      width: 400px;
+      margin: 90px 20px;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+   }
+
+   .c-yellow-box {
+      border-radius: 0.5em 0.5em 0 0;
+   }
+
+   .c-green-box {
+      border-radius: 0 0 0.5em 0.5em;
+   }
+}
