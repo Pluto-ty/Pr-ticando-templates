@@ -15,6 +15,7 @@ body {
 .u-button-container {
    display: flex;
    justify-content: center;
+   height: 35px;
 }
 
 .u-button-container li + li {
@@ -99,10 +100,7 @@ body {
    scroll-snap-type: x mandatory;
    -webkit-overflow-scrolling: touch;
    scroll-behavior: smooth;
-}
-
-.c-items .c-item {
-   /* margin: 0px 10px 0 20px; */
+   height: 400px;
 }
 
 .c-item {
@@ -110,16 +108,24 @@ body {
    background: rgba(175, 87, 247, 0.705);
    flex: none;
    width: 370px;
-   height: 380px;
+   height: 400px;
    padding: 10px;
    scroll-snap-align: start;
    pointer-events: none;
    border-radius: 0.25em;
    margin-left: 15px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+
+.c-item-button {
+   height: 100px;
+   align-items: center;
 }
 
 img {
-   height: 60%;
+   height: 230px;
    width: 100%;
    /* object-fit: cover; */
 }
