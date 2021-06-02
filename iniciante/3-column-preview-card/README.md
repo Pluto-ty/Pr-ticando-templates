@@ -30,9 +30,9 @@ O desafio é criar um compoente de cartão e deixar o mais próximo do design po
 
 <h3 id="links" align="center"> Links </h3>
 
--  Veja Funcionand: [Abrir Página](https://pluto-ty.github.io/Praticando-templates/iniciante/Stats%20preview%20card%20component/index.html)
+-  Veja Funcionand: [Abrir Página](https://pluto-ty.github.io/Praticando-templates/iniciante/3-column-preview-card/index.html)
 
--  Origem do Template: [Origem do Template](https://www.frontendmentor.io/challenges/stats-preview-card-component-8JqbgoU62)
+-  Origem do Template: [Origem do Template](https://www.frontendmentor.io/challenges/3column-preview-card-component-pH92eAR2-)
 
 <br>
 

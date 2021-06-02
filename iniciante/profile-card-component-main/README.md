@@ -16,7 +16,7 @@
 <br>
 <h3 id="desafio" align="center">O desafio </h3>
 <br>
-<p>
+<p align="center">
 O desafio é criar um compoente de cartão e deixar o mais próximo do design possível. Os usuários devem conseguir ver o layout, independente do tamanho da tela ou dispositivo.
 </p>
 
@@ -30,9 +30,9 @@ O desafio é criar um compoente de cartão e deixar o mais próximo do design po
 
 <h3 id="links" align="center"> Links </h3>
 
--  Veja Funcionand: [Abrir Página](https://pluto-ty.github.io/Praticando-templates/iniciante/Stats%20preview%20card%20component/index.html)
+-  Veja Funcionand: [Abrir Página](https://pluto-ty.github.io/Praticando-templates/iniciante/profile-card-component-main/index.html)
 
--  Origem do Template: [Origem do Template](https://www.frontendmentor.io/challenges/stats-preview-card-component-8JqbgoU62)
+-  Origem do Template: [Origem do Template](https://www.frontendmentor.io/challenges/profile-card-component-cfArpWshJ)
 
 <br>
 
@@ -50,7 +50,7 @@ O desafio é criar um compoente de cartão e deixar o mais próximo do design po
 <h3 id="o-que-aprendi" align="center"> O que usei e aprendi: </h3>
 <br>
 <p>
-Neste desafio utilizei flexbox para todo o layout e tentei usar pela primeira vez a técnica mobile-first estilizando todo o layout para a versão mobile e depois utilizando media queries para estilizar o layout para computadores. A minha única dúvida era como colocar o efeito de cor em cima da imagem e descobri que era usando o pseudo-elemento :after dentro da div que envolvia a imagem.
+Neste desafio utilizei flexbox para todo o layout, o que eu posso dizer que aprendi foi as duas imagens com absolute que em primeiro problema estava com problema com overflow: hidden; mas consegui resolver colocando max-width na página e cortando só o necessário das imagens em vez de elas por completo.   
 </p>
 
 ---
