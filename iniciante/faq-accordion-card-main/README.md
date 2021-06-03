@@ -30,7 +30,7 @@ O desafio é criar um cartão de perguntas frequentes e deixar o mais próximo d
 
 <h3 id="links" align="center"> Links </h3>
 
--  Veja Funcionand: [Abrir Página](https://pluto-ty.github.io/Praticando-templates/iniciante/Stats%20preview%20card%20component/index.html)
+-  Veja Funcionand: [Abrir Página](https://thyagoaraujom.github.io/Praticando-templates/iniciante/faq-accordion-card-main/index.html)
 
 -  Origem do Template: [Origem do Template](https://www.frontendmentor.io/challenges/faq-accordion-card-XlyjD0Oam)
 
