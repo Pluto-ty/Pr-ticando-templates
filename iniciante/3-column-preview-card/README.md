@@ -30,7 +30,7 @@ O desafio é criar um compoente de cartão e deixar o mais próximo do design po
 
 <h3 id="links" align="center"> Links </h3>
 
--  Veja Funcionand: [Abrir Página](https://pluto-ty.github.io/Praticando-templates/iniciante/3-column-preview-card/index.html)
+-  Veja Funcionand: [Abrir Página](https://thyagoaraujom.github.io/Praticando-templates/iniciante/3-column-preview-card/index.html)
 
 -  Origem do Template: [Origem do Template](https://www.frontendmentor.io/challenges/3column-preview-card-component-pH92eAR2-)
 
@@ -51,7 +51,7 @@ O desafio é criar um compoente de cartão e deixar o mais próximo do design po
 
 <h2 id="autor">Autor</h2>
 
-<a href="https://github.com/Pluto-ty">
+<a href="https://github.com/thyagoaraujom">
  <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/51569984" width="100px;" alt=""/>
 </br>
 <p> Thyago Araujo <p>
