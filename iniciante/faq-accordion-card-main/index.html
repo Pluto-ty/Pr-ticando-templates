@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <!-- displays site properly based on user's device -->
+
+      <link
+         rel="icon"
+         type="image/png"
+         sizes="32x32"
+         href="./images/favicon-32x32.png"
+      />
+      <link rel="stylesheet" href="./style.css" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+         rel="stylesheet"
+      />
+      <title>Frontend Mentor | FAQ Accordion Card</title>
+   </head>
+
+   <body>
+      <div class="c-bg">
+         <div class="c-container">
+            <div class="c-imgs">
+               <div class="c-woman-container">
+                  <img
+                     class="c-woman-img"
+                     src="./images/illustration-woman-online-desktop.svg"
+                     alt=""
+                  />
+                  <img
+                     class="c-desktop-shadow-image"
+                     src="./images/bg-pattern-desktop.svg"
+                     alt=""
+                  />
+                  <img
+                     class="c-mobile-shadow-image"
+                     src="./images/bg-pattern-mobile.svg"
+                     alt=""
+                  />
+               </div>
+               <img
+                  class="c-box-img"
+                  src="./images/illustration-box-desktop.svg"
+                  alt=""
+               />
+            </div>
+            <div class="c-content-container">
+               <h2>FAQ</h2>
+               <div class="c-content">
+                  <div>
+                     <p id="p1">
+                        How many team members can I invite?
+                        <img
+                           onclick="aswer('as1', 'p1')"
+                           src="./images/icon-arrow-down.svg"
+                           alt=""
+                        />
+                     </p>
+
+                     <span id="as1">
+                        You can invite up to 2 additional users on the Free
+                        plan. There is no limit on team members for the Premium
+                        plan.
+                     </span>
+                  </div>
+
+                  <div>
+                     <p id="p2">
+                        What is the maximum file upload size?
+                        <img
+                           onclick="aswer('as2', 'p2')"
+                           src="./images/icon-arrow-down.svg"
+                           alt=""
+                        />
+                     </p>
+                     <span id="as2">
+                        No more than 2GB. All files in your account must fit
+                        your allotted storage space.</span
+                     >
+                  </div>
+
+                  <div>
+                     <p id="p3">
+                        How do I reset my password?
+                        <img
+                           onclick="aswer('as3', 'p3')"
+                           src="./images/icon-arrow-down.svg"
+                           alt=""
+                        />
+                     </p>
+                     <span id="as3">
+                        Click “Forgot password” from the login page or “Change
+                        password” from your profile page. A reset link will be
+                        emailed to you.
+                     </span>
+                  </div>
+
+                  <div>
+                     <p id="p4">
+                        Can I cancel my subscription?
+                        <img
+                           onclick="aswer('as4', 'p4')"
+                           src="./images/icon-arrow-down.svg"
+                           alt=""
+                        />
+                     </p>
+                     <span id="as4">
+                        Yes! Send us a message and we’ll process your request no
+                        questions asked.
+                     </span>
+                  </div>
+
+                  <div>
+                     <p id="p5">
+                        Do you provide additional support?
+                        <img
+                           onclick="aswer('as5', 'p5')"
+                           src="./images/icon-arrow-down.svg"
+                           alt=""
+                        />
+                     </p>
+                     <span id="as5">
+                        Chat and email support is available 24/7. Phone lines
+                        are open during normal business hours.
+                     </span>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <script src="./script.js"></script>
+   </body>
+</html>
