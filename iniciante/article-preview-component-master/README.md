@@ -32,7 +32,7 @@ O desafio é criar um preview de artigo e deixar o mais próximo do design poss�
 
 -  Veja Funcionand: [Abrir Página](https://thyagoaraujom.github.io/Praticando-templates/iniciante/faq-accordion-card-main/index.html)
 
--  Origem do Template: [Origem do Template](https://www.frontendmentor.io/challenges/faq-accordion-card-XlyjD0Oam)
+-  Origem do Template: [Origem do Template](https://www.frontendmentor.io/challenges/article-preview-component-dYBN_pYFT)
 
 <br>
 
