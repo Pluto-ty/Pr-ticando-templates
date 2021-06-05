@@ -1,0 +1,246 @@
+/* Configuração Geral */
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: "Manrope", sans-serif;
+}
+
+body {
+   font-size: 13px;
+}
+/* Container e Grid container  */
+
+.c-container {
+   max-width: 1920px;
+   width: 100%;
+   max-height: 1080px;
+   height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background: hsl(210, 46%, 95%);
+}
+
+.c-grid-container {
+   border-radius: 0.5em;
+   width: 720px;
+   height: 280px;
+   display: grid;
+   grid-template-columns: 285px 2fr;
+   background: #fff;
+}
+
+/* Primeira coluna / Imagem */
+
+.c-drawers-img {
+   width: 100%;
+   height: 100%;
+   background-image: url(./images/drawers.jpg);
+   background-size: cover;
+   background-position: left center;
+   border-radius: 0.5em 0 0 0.5em;
+}
+
+/* Container do conteúdo */
+
+.c-content-container {
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   padding: 20px 40px 20px 40px;
+}
+
+.c-content-container h3 {
+   font-weight: bold;
+   font-size: 19px;
+   color: hsl(217, 19%, 35%);
+}
+
+.c-content-container .c-text {
+   color: hsl(212, 23%, 69%);
+   line-height: 1.5em;
+   padding: 0;
+}
+
+/* Contact container */
+
+.c-contact-container {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.c-contact {
+   display: flex;
+}
+
+.c-contact p {
+   margin-left: 10px;
+   color: hsl(217, 19%, 35%);
+   font-weight: bold;
+   padding: 0;
+}
+
+.c-contact span {
+   color: hsl(212, 23%, 69%);
+   font-weight: normal;
+}
+
+.c-contact img {
+   width: 35px;
+   border-radius: 50%;
+}
+
+.c-contact-icon-container {
+   width: 34px;
+   height: 32px;
+   background: hsl(210, 46%, 95%);
+   border-radius: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.c-contact-icon-container .c-share-icon {
+   width: 17px;
+}
+
+/* Share Container */
+
+.c-share-container {
+   position: absolute;
+   right: -65px;
+   bottom: 90px;
+   display: none;
+   justify-content: space-around;
+   align-items: center;
+   width: 250px;
+   height: 60px;
+   background: hsl(217, 19%, 35%);
+   border-radius: 0.5em;
+}
+
+.c-share-container p {
+   color: hsl(212, 23%, 69%);
+}
+
+.c-share-container .c-share {
+   display: flex;
+   width: 80%;
+   justify-content: space-around;
+}
+
+.c-share-icon-container {
+   width: 36px;
+   height: 34px;
+   background: hsl(214, 17%, 51%);
+   border-radius: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: absolute;
+   bottom: -58px;
+   right: 105px;
+}
+
+.c-share-icon-container .c-share-icon {
+   filter: brightness(5);
+   width: 17px;
+}
+
+@media (max-width: 600px) {
+   /* Grid Container */
+   .c-grid-container {
+      border-radius: 0.5em;
+      width: 320px;
+      height: 460px;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1.2fr 2fr;
+      background: #fff;
+   }
+
+   /* Primeira Linha / Imagem */
+
+   .c-drawers-img {
+      border-radius: 0.5em 0.5em 0 0;
+   }
+
+   /* Content Container */
+
+   .c-content-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 0;
+   }
+
+   .c-content-container h3 {
+      font-weight: bold;
+      font-size: 16px;
+      color: hsl(217, 19%, 35%);
+      padding: 0px 34px 0px 30px;
+   }
+
+   .c-content-container .c-text {
+      padding: 20px 34px 20px 30px;
+   }
+
+   .c-contact-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 9px 30px 15px 30px;
+   }
+
+   .c-contact p {
+      margin-left: 10px;
+      color: hsl(217, 19%, 35%);
+      font-weight: bold;
+   }
+
+   /* Share container */
+
+   .c-share-container {
+      position: static;
+      right: 0px;
+      bottom: 0px;
+      display: none;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+      height: 60px;
+      background: hsl(217, 19%, 35%);
+      border-radius: 0 0 0.5em 0.5em;
+   }
+
+   .c-share-container p {
+      color: hsl(212, 23%, 69%);
+   }
+
+   .c-share-container .c-share {
+      display: flex;
+      width: 60%;
+      justify-content: space-around;
+   }
+
+   .c-share-icon-container {
+      width: 30px;
+      height: 30px;
+      background: hsl(214, 17%, 51%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: static;
+      bottom: 0px;
+   }
+
+   .c-share-icon-container .c-share-icon {
+      filter: brightness(5);
+      width: 15px;
+   }
+}
