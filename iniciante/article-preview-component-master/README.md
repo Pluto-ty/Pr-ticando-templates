@@ -30,7 +30,7 @@ O desafio é criar um preview de artigo e deixar o mais próximo do design poss�
 
 <h3 id="links" align="center"> Links </h3>
 
--  Veja Funcionand: [Abrir Página](https://thyagoaraujom.github.io/Praticando-templates/iniciante/faq-accordion-card-main/index.html)
+-  Veja Funcionand: [Abrir Página](https://thyagoaraujom.github.io/Praticando-templates/iniciante/article-preview-component-master/index.html)
 
 -  Origem do Template: [Origem do Template](https://www.frontendmentor.io/challenges/article-preview-component-dYBN_pYFT)
 
