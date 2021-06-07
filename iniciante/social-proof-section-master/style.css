@@ -1,0 +1,213 @@
+* {
+   padding: 0px;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+.c-grid-container {
+   display: grid;
+   grid:
+      "about" 1fr
+      "rate" 1fr
+      "comments" / 1fr;
+   padding: 90px 20px 90px 20px;
+   text-align: center;
+   font-family: "Spartan", sans-serif;
+   grid-gap: 3em;
+}
+
+/* TITLE AND ABOUT */
+
+.c-about {
+   grid-area: about;
+}
+
+.c-title {
+   margin: 0 auto 20px auto;
+   font-size: 35px;
+   font-weight: bold;
+   color: hsl(300, 43%, 22%);
+   max-width: 300px;
+}
+
+.c-about-text {
+   font-size: 14.5px;
+   line-height: 1.5em;
+   color: hsl(303, 10%, 53%);
+   max-width: 450px;
+   margin: 0 auto;
+}
+
+/* RATE */
+.c-rate-container {
+   display: block;
+   grid-area: rate;
+}
+
+.c-rate-container div + div {
+   margin-top: 20px;
+}
+
+.c-rate {
+   padding: 15px;
+   width: 100%;
+   background: hsl(300, 24%, 96%);
+   border-radius: 0.5em;
+}
+
+.c-rate p {
+   margin-top: 10px;
+   font-size: 15px;
+   color: hsl(300, 43%, 22%);
+   font-weight: bold;
+}
+
+/* Comments */
+
+.c-comments-container {
+   grid-area: comments;
+   display: block;
+}
+
+.c-comment {
+   background: hsl(300, 43%, 22%);
+   padding: 30px 20px 30px 25px;
+   text-align: start;
+   border-radius: 0.5em;
+   line-height: 1.5em;
+   margin-bottom: 20px;
+}
+
+.c-img-name-container {
+   display: flex;
+   margin-bottom: 20px;
+   font-size: 15px;
+   align-items: center;
+   height: 50px;
+}
+
+.c-comment img {
+   width: 50px;
+   border-radius: 50%;
+   margin-right: 20px;
+}
+
+.c-comment-name {
+   color: hsl(300, 24%, 96%);
+   font-weight: bold;
+   font-size: 15px;
+}
+
+.c-comment-verify-buyer {
+   color: hsl(333, 80%, 67%);
+   font-weight: normal;
+   font-size: 15px;
+}
+
+.c-comment-text {
+   color: hsl(300, 24%, 96%);
+   font-weight: normal;
+   font-size: 14px;
+}
+
+@media (min-width: 768px) {
+   .c-grid-container {
+      max-height: 1920px;
+      height: 100%;
+      margin: 0 auto;
+      max-width: 1200px;
+      display: grid;
+      grid:
+         "about rate" minmax(250px, 1fr)
+         "comments comments" minmax(300px, 1fr)
+         / 1fr 1fr;
+      padding: 80px 20px 80px 20px;
+      text-align: start;
+      font-family: "Spartan", sans-serif;
+      grid-gap: 3em;
+   }
+
+   /* About */
+
+   .c-title {
+      margin: 0 0 10px 0;
+      font-size: 45px;
+      max-width: 400px;
+   }
+
+   .c-about-text {
+      font-size: 14px;
+      margin: 0;
+   }
+
+   /* Rate */
+
+   .c-rate-container {
+      display: flex;
+      flex-direction: column;
+   }
+   .c-rate {
+      display: flex;
+      align-items: center;
+      width: 450px;
+   }
+
+   .c-rate-img-container {
+      margin-left: 10px;
+   }
+
+   .c-rate p {
+      margin-left: 40px;
+      margin-top: 0px;
+      font-size: 15px;
+      color: hsl(300, 43%, 22%);
+      font-weight: bold;
+      justify-self: center;
+   }
+
+   .c-rate-1 {
+      align-self: flex-start;
+   }
+
+   .c-rate-2 {
+      align-self: center;
+   }
+
+   .c-rate-3 {
+      align-self: flex-end;
+   }
+
+   /* Comments */
+
+   .c-comments-container {
+      display: flex;
+      justify-content: space-between;
+   }
+
+   .c-comment {
+      max-width: 360px;
+      background: hsl(300, 43%, 22%);
+      padding: 30px 20px 30px 25px;
+      text-align: start;
+      border-radius: 0.5em;
+      line-height: 1.5em;
+      margin-bottom: 0px;
+      max-height: 280px;
+   }
+
+   .c-comment-1 {
+      align-self: flex-start;
+   }
+
+   .c-comment-2 {
+      align-self: center;
+   }
+
+   .c-comment-3 {
+      align-self: flex-end;
+   }
+
+   .c-comments-container div + div {
+      margin-left: 10px;
+   }
+}
