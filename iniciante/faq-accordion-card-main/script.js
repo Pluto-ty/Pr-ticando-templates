@@ -1,8 +1,10 @@
-function aswer(id, idp) {
-   let res = document.getElementById(id);
-   let p = document.getElementById(idp);
-
-   if (res.style.display == "block")
-      (res.style.display = "none"), (p.style.fontWeight = "normal");
-   else (res.style.display = "block"), (p.style.fontWeight = "bold");
-}
+let Show = {
+   showP() {
+      let principalProjects = document.querySelector("#js-principal-projects");
+      if (principalProjects.classList.contains("on") != true) {
+         document.querySelector("#js-principal-projects").classList.add("on");
+         document.queryselector("#js-newbie-projects").classList.remove("on");
+      }
+   },
+   ShowI() {},
+};
