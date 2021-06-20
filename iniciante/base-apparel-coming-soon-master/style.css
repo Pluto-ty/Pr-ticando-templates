@@ -1,0 +1,129 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: "Josefin Sans", sans-serif;
+}
+
+:root {
+   --Soft-red: hsl(0, 93%, 68%);
+   --Desaturated-Red: hsl(0, 36%, 70%);
+   --Dark-Grayish-Red: hsl(0, 6%, 24%);
+}
+
+.c-grid-container {
+   display: grid;
+   grid:
+      "logo hero-img" 200px
+      "content hero-img" / 1.5fr 1fr;
+   width: 100vw;
+   height: 100vh;
+   max-width: 1600px;
+   max-height: 900px;
+}
+
+.c-logo {
+   grid-area: logo;
+   margin: 50px 0 0 150px;
+}
+
+/* Info Container */
+
+.c-info-container {
+   grid-area: content;
+   max-width: 500px;
+   margin-left: 150px;
+}
+
+.c-info-container h2 {
+   line-height: 1.1em;
+}
+
+.c-info-container span,
+.c-info-container p {
+   color: var(--Desaturated-Red);
+   font-weight: 300;
+}
+.c-info-container p {
+   font-weight: normal;
+   line-height: 1.8em;
+   width: 450px;
+}
+
+.c-info-container h2 {
+   font-size: 80px;
+   letter-spacing: 14px;
+   color: var(--Dark-Grayish-Red);
+}
+
+/* Input */
+
+.c-input-container {
+   position: relative;
+}
+
+.c-input-email {
+   margin-top: 30px;
+   width: 390px;
+   border: 1px solid var(--Desaturated-Red);
+   border-radius: 5em;
+   padding: 20px;
+}
+
+.c-input-email::placeholder {
+   color: var(--Desaturated-Red);
+}
+
+.c-erro-input {
+   width: 25px;
+   display: none;
+   color: red;
+   position: absolute;
+   right: 170px;
+   top: 45px;
+}
+
+textarea:focus,
+input:focus,
+select:focus {
+   outline: 0;
+   border: 2px solid var(--Soft-red);
+}
+
+.c-submit-button {
+   width: 100px;
+   display: inline-block;
+   height: 58px;
+   border: 1px solid var(--Desaturated-Red);
+   background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+   border-radius: 2em;
+   position: relative;
+   right: 50px;
+   top: 5px;
+   cursor: pointer;
+   transition: 100ms ease-in-out;
+}
+
+.c-submit-button:focus {
+   outline: 0;
+}
+
+.c-submit-button:hover {
+   background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 80%, 86%) 10%);
+   box-shadow: 0px 5px 20px hsl(0, 80%, 86%);
+}
+
+.c-input-container .c-error-message {
+   color: var(--Soft-red);
+   margin: 10px 0 0 20px;
+   font-size: 15px;
+   display: none;
+}
+
+/* Hero Image */
+.c-hero-img {
+   grid-area: hero-img;
+   width: 100%;
+   height: 100vh;
+   max-height: 900px;
+}
