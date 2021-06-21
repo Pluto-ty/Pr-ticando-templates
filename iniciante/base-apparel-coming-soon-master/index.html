@@ -30,28 +30,44 @@
                store. Add your email below to stay up-to-date with announcements
                and our launch deals.
             </p>
-            <div class="c-input-container">
-               <input
-                  class="c-input-email"
-                  type="email"
-                  placeholder="Email Address"
-                  id="js-email"
-               />
-               <img
-                  class="c-erro-input"
-                  src="./images/icon-error.svg"
-                  alt="Erro image"
-               />
-               <button class="c-submit-button" type="submit" for="js-email">
-                  <img
-                     src="./images/icon-arrow.svg"
-                     alt="Arrow of Submit Button"
+            <form action="" method="POST" id="js-email" name="f1">
+               <div class="c-input-container">
+                  <input
+                     class="c-input-email"
+                     type="text"
+                     name="email"
+                     onblur="validacaoEmail(f1.email)"
+                     maxlength="60"
+                     placeholder="Email Address"
                   />
-               </button>
-               <p class="c-error-message">Please provide a valid email</p>
-            </div>
+
+                  <img
+                     class="c-erro-input-image"
+                     id="js-error-img"
+                     src="./images/icon-error.svg"
+                     alt="Erro image"
+                  />
+                  <button
+                     type="button"
+                     class="c-submit-button"
+                     onclick="validacaoEmail(f1.email)"
+                     for="js-email"
+                  >
+                     <img
+                        src="./images/icon-arrow.svg"
+                        alt="Arrow of Submit Button"
+                     />
+                  </button>
+                  <p class="c-error-message" id="js-error-message">
+                     Please provide a valid email
+                  </p>
+               </div>
+            </form>
          </div>
+
          <img class="c-hero-img" src="./images/hero-desktop.jpg" alt="" />
+         <img class="c-mobile-hero-img" src="./images/hero-mobile.jpg" alt="" />
       </div>
+      <script src="./script.js"></script>
    </body>
 </html>
