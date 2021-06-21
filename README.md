@@ -53,6 +53,15 @@ Utilizando templates prontos para reforçar conhecimentos já adquiridos e apren
 
 ---
 
+<h3 id="screenshot" align="center"> Screenshot </h3>
+<div align="center">
+<img src="./assets/readme/web.gif" width="750px">
+<img src="./assets/readme/mobile.gif" width="250px">
+</div>
+</br>
+
+---
+
 <h2 id="--como-executar-o-projeto-"> 🚀 Como executar o projeto </h2>
 
 Este projeto ainda não tem uma página principal para navegar entre os templates. Clone ele se quiser ter os templates na sua maquina.
