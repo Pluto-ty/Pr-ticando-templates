@@ -1,0 +1,66 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: Consolas, "Courier New";
+}
+
+.c-box {
+   max-height: 900px;
+   max-width: 1600px;
+   width: 100vw;
+   height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin: 0 20px;
+}
+
+.c-content-container {
+   max-width: 400px;
+   max-height: 400px;
+   border: 1px solid black;
+   text-align: center;
+   padding: 40px 80px 80px 80px;
+}
+
+.c-title {
+   margin-top: 20px;
+}
+
+.c-about {
+   margin-top: 20px;
+   font-size: 18px;
+   width: 200px;
+   margin: 20px auto;
+}
+
+.c-binary-container {
+   margin: 20px auto;
+}
+.c-binary-label {
+   font-weight: bold;
+   font-size: 20px;
+}
+
+.c-decimal-container {
+   display: flex;
+   justify-content: center;
+}
+
+.c-decimal-label {
+   font-size: 20px;
+   font-weight: bold;
+   margin-right: 10px;
+}
+
+.c-decimal-number {
+   max-width: 200px;
+   min-width: 150px;
+   border: 1px solid black;
+   /* height: 50px; */
+}
+
+.c-button {
+   margin-top: 20px;
+}
