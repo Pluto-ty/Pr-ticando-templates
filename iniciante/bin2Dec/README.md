@@ -16,23 +16,47 @@
 <br>
 <h3 id="desafio" align="center">O desafio </h3>
 <br>
+<h3>Bin2Dec</h3>
 <p>
-O desafio é criar um preview de artigo e deixar o mais próximo do design possível. Os usuários devem conseguir ver o layout, independente do tamanho da tela ou dispositivo.
+
+Nível: 1-iniciante
+
+Binário é o sistema numérico no qual todos os computadores digitais são baseados. Portanto, é importante que os desenvolvedores entendam matemática binária ou de base 2. O objetivo do Bin2Dec é fornecer prática e compreensão de como os cálculos binários.
+
+Bin2Dec permite que o usuário insira strings de 8 dígitos binários ou mais, de zeros(0) e e uns(1), em qualquer sequência e, em seguida, exibe seu equivalente decimal.
+
+Este desafio requer que o desenvolvedor que o está implementando siga estas restrições:
+
+-  Arrays não podem ser usadas para conter os dígitos binários inseridos pelo usuário.
+
+-  A determinação do equivalente decimal de um dígito binário particular na sequência deve ser calculada usando uma única função matemática, por exemplo, o logaritmo natural. Depende de você descobrir qual função usar.
+
+User Story:
+
+[x] O usuário pode inserir até 8 dígitos binários em um campo de entrada.
+
+[x] O usuário deve ser notificado se algo diferente de 0 ou 1 foi inserido.
+
+[x] O usuário visualiza os resultados em um único campo de saída contendo o equivalente decimal (base 10) do número binário que foi inserido.
+
+Recursos bônus
+
+[x] O usuário pode inserir um número variável de dígitos binários.
+
 </p>
 
 <h3 id="screenshot" align="center"> Screenshot </h3>
 <div align="center">
-<img src="./images/readme/web.PNG" max-width="750px">
-<img src="./images/readme/mobile.PNG" max-width="250px">
+<img src="./readme/web.PNG" max-width="750px">
 </div>
 <br>
 <br>
 
 <h3 id="links" align="center"> Links </h3>
 
--  Veja Funcionand: [Abrir Página](https://thyagoaraujom.github.io/Praticando-templates/iniciante/base-apparel-coming-soon-master/index.html)
+-  Veja Funcionand: [Abrir Página](https://thyagoaraujom.github.io/Praticando-templates/iniciante/bin2Dec/index.html)
 
--  Origem do Template: [Origem do Template](https://www.frontendmentor.io/challenges/base-apparel-coming-soon-page-5d46b47f8db8a7063f9331a0)
+-  Origem do Desafio: [Origem do Template](https://github.com/florinpop17/app-ideas)
 
 <br>
 
@@ -44,13 +68,13 @@ O desafio é criar um preview de artigo e deixar o mais próximo do design poss�
 <h3 id="build-with" align="center"> Contruido com: </h3>
 
 -  Html
--  Css ( Grid, Flexbox e BEM)
--  Javascript ( Função para modificar elementos do css.)
+-  Css (BEM)
+-  Javascript ( Criar verificação dos números e convertelos para decimais)
 
 <h3 id="o-que-aprendi" align="center"> O que usei e aprendi: </h3>
 <br>
 <p>
-Neste desafio utilizei grid layout para fazer a base do projeto. Enquanto estava na parte do Js aprendi como verificar e validar um email.
+Neste desafio utilizei o básico de css só para a visualização da aplicação. Usei verificação rápida com if para caso o usuário coloque um valor inválido ao desejado e a função parseInt() para a conversão, que converte para você automaticamente uma string em número e depois converte o valor binário em decimal e assim retornando para o input onde o valor decimal deve ser colocado.
 </p>
 
 ---

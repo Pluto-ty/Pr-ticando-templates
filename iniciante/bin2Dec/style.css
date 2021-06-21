@@ -21,7 +21,7 @@
    max-height: 400px;
    border: 1px solid black;
    text-align: center;
-   padding: 40px 80px 80px 80px;
+   padding: 40px 60px 80px 60px;
 }
 
 .c-title {
@@ -43,6 +43,11 @@
    font-size: 20px;
 }
 
+.c-binary-number {
+   width: 200px;
+   height: 25px;
+}
+
 .c-decimal-container {
    display: flex;
    justify-content: center;
@@ -51,12 +56,11 @@
 .c-decimal-label {
    font-size: 20px;
    font-weight: bold;
-   margin-right: 10px;
+   margin-right: 5px;
 }
 
 .c-decimal-number {
-   max-width: 200px;
-   min-width: 150px;
+   width: 210px;
    border: 1px solid black;
    /* height: 50px; */
 }
