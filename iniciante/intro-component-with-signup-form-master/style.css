@@ -1,5 +1,204 @@
+/* Estilos Gerais */
+
 * {
    margin: 0;
    padding: 0;
    box-sizing: border-box;
+}
+
+:root {
+   --bg-color: hsl(0, 100%, 74%);
+   --input-text-color: hsl(249, 10%, 26%);
+   --green: hsl(154, 59%, 51%);
+   --blue: hsl(248, 32%, 49%);
+   --Grayish-Blue: hsla(246, 25%, 77%);
+}
+
+body {
+   background: var(--bg-color);
+   font-family: "Poppins", sans-serif;
+   background-image: url(./images/bg-intro-mobile.png);
+}
+
+textarea:focus,
+input:focus,
+select:focus,
+button:focus {
+   outline: 0;
+   border: 0px solid var(--Soft-red);
+}
+
+/* Grid container */
+
+.c-grid-container {
+   max-height: 900px;
+   margin: 0px auto;
+   max-width: 350px;
+   width: 100vw;
+   height: 100%;
+   display: grid;
+   grid:
+      "about"
+      "form" 2fr;
+}
+/* About */
+
+.c-about-container {
+   grid-area: about;
+   margin-top: 80px;
+}
+
+.c-title,
+.c-text {
+   color: white;
+}
+
+.c-title {
+   max-width: 205px;
+   margin: 0 auto 20px auto;
+}
+
+.c-text {
+   max-width: 320px;
+   margin: 0 auto 50px auto;
+   text-align: center;
+   font-weight: normal;
+}
+
+/* Content */
+
+.c-content-container {
+   grid-area: form;
+   margin-bottom: 50px;
+}
+.c-free-trial {
+   background: var(--blue);
+   max-width: 320px;
+   margin: 0 auto;
+   padding: 20px 60px 20px 60px;
+   text-align: center;
+   border-radius: 0.5em;
+   color: white;
+   font-weight: normal;
+   font-size: 16px;
+   margin-bottom: 20px;
+   box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.274);
+}
+
+.c-free-trial span {
+   font-weight: bold;
+   font-size: 16px;
+}
+
+/* Form container  */
+
+.c-form-container {
+   width: 95%;
+   margin: 0 auto;
+   background: white;
+   border-radius: 0.5em;
+   padding: 20px;
+}
+
+.c-form-container input {
+   width: 100%;
+   height: 50px;
+   border: 1px solid var(--Grayish-Blue);
+   opacity: 0.6;
+   border-radius: 0.25em;
+   padding: 10px;
+}
+.c-form-container input::placeholder {
+   color: var(--input-text-color);
+   font-weight: 700;
+   font-size: 14px;
+   font-family: "Poppins", sans-serif;
+}
+
+.c-form-container input + input {
+   margin-top: 10px;
+}
+
+.c-form-container button {
+   width: 100%;
+   height: 50px;
+   margin: 10px 0;
+   background: var(--green);
+   border: 1px solid var(--green);
+   border-radius: 0.5em;
+   color: white;
+   font-size: 15px;
+   font-weight: bold;
+   box-shadow: 0px 5px 0px hsl(154, 58%, 45%);
+}
+
+.c-terms-and-services {
+   display: block;
+   font-size: 12px;
+   max-width: 260px;
+   text-align: center;
+   color: var(--Grayish-Blue);
+   margin: 0 auto;
+   line-height: 20px;
+}
+
+.c-terms-and-services span {
+   color: var(--bg-color);
+}
+
+@media (min-width: 768px) {
+   /* Grid */
+   .c-grid-container {
+      max-height: 900px;
+      margin: 50px auto;
+      max-width: 1200px;
+      width: 100vw;
+      height: 100%;
+      display: grid;
+      grid: "about form" / 1fr 1fr;
+      align-items: center;
+      gap: 0px;
+   }
+
+   /* About */
+
+   .c-about-container {
+      grid-area: about;
+      margin-top: 50px;
+   }
+   .c-title {
+      max-width: 500px;
+      font-size: 50px;
+      margin: 0 auto 0px auto;
+   }
+
+   .c-text {
+      max-width: 500px;
+      margin: 0 auto 0px auto;
+      text-align: start;
+      font-weight: normal;
+   }
+
+   /* Form */
+   .c-form-container input + input {
+      margin-top: 40px;
+   }
+
+   .c-free-trial {
+      background: var(--blue);
+      max-width: 95%;
+      margin: 0 auto;
+      padding: 20px 60px 20px 60px;
+      text-align: center;
+      border-radius: 0.5em;
+      color: white;
+      font-weight: normal;
+      font-size: 16px;
+      margin-bottom: 20px;
+      box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.274);
+   }
+
+   .c-form-container button {
+      margin: 40px 0 10px 0;
+   }
 }
