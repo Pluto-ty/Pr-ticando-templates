@@ -200,5 +200,6 @@ button:focus {
 
    .c-form-container button {
       margin: 40px 0 10px 0;
+      cursor: pointer;
    }
 }
