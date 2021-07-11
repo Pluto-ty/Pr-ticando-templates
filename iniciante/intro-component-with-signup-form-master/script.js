@@ -1,9 +1,35 @@
 const Form = {
    validation() {
-      if (!Form.validationEmail()) {
-         console.log("email inválido");
+      if (!Form.validationName()) {
+         document.getElementById("js-error-name-img").style.display = "block";
+         document.getElementById("js-error-name-message").style.display =
+            "block";
       } else {
-         console.log("email.válido");
+         document.getElementById("js-error-name-img").style.display = "none";
+         document.getElementById("js-error-name-message").style.display =
+            "none";
+      }
+
+      if (!Form.validationEmail()) {
+         document.getElementById("js-error-email-img").style.display = "block";
+         document.getElementById("js-error-email-message").style.display =
+            "block";
+      } else {
+         document.getElementById("js-error-email-img").style.display = "none";
+         document.getElementById("js-error-email-message").style.display =
+            "none";
+      }
+
+      if (!Form.validationLastName()) {
+         document.getElementById("js-error-last-name-img").style.display =
+            "block";
+         document.getElementById("js-error-last-name-message").style.display =
+            "block";
+      } else {
+         document.getElementById("js-error-last-name-img").style.display =
+            "none";
+         document.getElementById("js-error-last-name-message").style.display =
+            "none";
       }
    },
    validationEmail() {
@@ -38,13 +64,24 @@ const Form = {
       }
    },
 
-   validaçãoNames() {
+   validationName() {
       let name = document.querySelector("#js-name").value;
-      let lastName = document.querySelector("#js-last-name");
+
       var padrao = /[^a-zà-ú]/gi;
       var valida_nome = name.match(padrao);
+
+      if (valida_nome || !name) {
+         return false;
+      } else {
+         return true;
+      }
+   },
+
+   validationLastName() {
+      var padrao = /[^a-zà-ú]/gi;
+      let lastName = document.querySelector("#js-last-name").value;
       var valida_sobrenome = lastName.match(padrao);
-      if (valida_nome || !nome) {
+      if (valida_sobrenome || !lastName) {
          return false;
       } else {
          return true;

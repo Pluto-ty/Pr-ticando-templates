@@ -35,20 +35,66 @@
             </p>
             <div class="c-form-container">
                <form action="">
-                  <input id="js-name" type="text" placeholder="First Name " />
-                  <input
-                     id="js-last-name"
-                     type="text"
-                     placeholder="Last Name "
-                  />
-                  <input
-                     id="js-email-field"
-                     type="email"
-                     placeholder="Email Address"
-                  />
-
-                  <input type="password" placeholder="Password" />
-
+                  <div class="c-input-container">
+                     <input
+                        id="js-name"
+                        type="text"
+                        placeholder="First Name "
+                     />
+                     <img
+                        id="js-error-name-img"
+                        src="./images/icon-error.svg"
+                        alt=""
+                        class="c-error-img"
+                     />
+                     <p id="js-error-name-message" class="c-error-message">
+                        Name Invalid!
+                     </p>
+                  </div>
+                  <div class="c-input-container">
+                     <input
+                        id="js-last-name"
+                        type="text"
+                        placeholder="Last Name "
+                     />
+                     <img
+                        id="js-error-last-name-img"
+                        src="./images/icon-error.svg"
+                        alt=""
+                        class="c-error-img"
+                     />
+                     <p id="js-error-last-name-message" class="c-error-message">
+                        Last Name invalid!
+                     </p>
+                  </div>
+                  <div class="c-input-container">
+                     <input
+                        id="js-email-field"
+                        type="email"
+                        placeholder="Email Address"
+                     />
+                     <img
+                        id="js-error-email-img"
+                        src="./images/icon-error.svg"
+                        alt=""
+                        class="c-error-img"
+                     />
+                     <p id="js-error-email-message" class="c-error-message">
+                        Email invalid!
+                     </p>
+                  </div>
+                  <div class="c-input-container">
+                     <input type="password" placeholder="Password" />
+                     <img
+                        id="js-error-password-img"
+                        src="./images/icon-error.svg"
+                        alt=""
+                        class="c-error-img"
+                     />
+                     <p id="js-error-password-message" class="c-error-message">
+                        Password invalid!
+                     </p>
+                  </div>
                   <button type="button" onclick="Form.validation()">
                      CLAIM YOUR FREE TRIAL
                   </button>
