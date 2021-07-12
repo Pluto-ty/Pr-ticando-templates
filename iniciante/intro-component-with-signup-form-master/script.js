@@ -14,10 +14,26 @@ const Form = {
          document.getElementById("js-error-email-img").style.display = "block";
          document.getElementById("js-error-email-message").style.display =
             "block";
+         document.getElementById("js-email-field").placeholder =
+            "exemplo@exemplo.com";
+         document
+            .getElementById("js-email-field")
+            .classList.add("c-input-email-erro");
+         document
+            .getElementById("js-email-field")
+            .classList.remove("c-input-email");
       } else {
          document.getElementById("js-error-email-img").style.display = "none";
          document.getElementById("js-error-email-message").style.display =
             "none";
+         document.getElementById("js-email-field").placeholder =
+            "Email Address";
+         document
+            .getElementById("js-email-field")
+            .classList.remove("c-input-email-erro");
+         document
+            .getElementById("js-email-field")
+            .classList.add("c-input-email");
       }
 
       if (!Form.validationLastName()) {
@@ -29,6 +45,22 @@ const Form = {
          document.getElementById("js-error-last-name-img").style.display =
             "none";
          document.getElementById("js-error-last-name-message").style.display =
+            "none";
+      }
+
+      if (
+         !Form.validationPassword() ||
+         Form.validationPassword() == "senha fraca" ||
+         Form.validationPassword() == "senha grande demais"
+      ) {
+         document.getElementById("js-error-password-img").style.display =
+            "block";
+         document.getElementById("js-error-password-message").style.display =
+            "block";
+      } else {
+         document.getElementById("js-error-password-img").style.display =
+            "none";
+         document.getElementById("js-error-password-message").style.display =
             "none";
       }
    },
@@ -88,16 +120,17 @@ const Form = {
       }
    },
 
-   validaçãoSenha(p) {
+   validationPassword() {
+      let p = document.getElementById("js-password-input").value;
       var retorno = false;
       var letrasMaiusculas = /[A-Z]/;
       var letrasMinusculas = /[a-z]/;
       var numeros = /[0-9]/;
-      var caracteresEspeciais = /[!|@|#|$|%|^|&|*|(|)|-|_]/;
+      var caracteresEspeciais = /[!|@|.|#|$|%|^|&|*|(|)|-|_]/;
       if (p.length < 3) {
          return "senha fraca";
       }
-      if (p.length < 16) {
+      if (p.length > 16) {
          return "senha grande demais";
       }
       var auxMaiuscula = 0;
