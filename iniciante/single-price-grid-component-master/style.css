@@ -94,8 +94,9 @@
 
 .c-area-2 button {
    background: var(--Bright-Yellow);
-   width: 230px;
-   height: 40px;
+   width: 250px;
+   height: 50px;
+   font-size: 17px;
    border-radius: 0.5em;
    border: 0px black;
    color: white;
@@ -155,7 +156,7 @@
       display: grid;
       grid:
          "area1" 1fr
-         "area2" 1fr
+         "area2" 235px
          "area3" 1fr / 1fr;
       max-width: 700px;
       width: 100%;
@@ -165,5 +166,62 @@
       background: var(--Light-Gray);
       border-radius: 0.5em;
       margin: 0 20px;
+   }
+
+   /* AREA 1 */
+   .c-area-1 {
+      padding: 20px 20px 20px 20px;
+   }
+
+   .c-area-1 p {
+      font-size: 14px;
+      color: var(--Grayish-Blue);
+      line-height: 2em;
+   }
+
+   /* AREA 2 */
+
+   .c-area-2 {
+      padding: 20px 20px 0px 20px;
+      border-radius: 0 0 0 0;
+   }
+
+   .c-area-2 h3 {
+      color: white;
+      font-size: 16px;
+      margin-bottom: 20px;
+   }
+
+   .c-area-2 p {
+      color: white;
+      margin-bottom: 30px;
+   }
+
+   .c-area-2 .c-value {
+      font-size: 30px;
+      color: white;
+      margin-bottom: 15px;
+   }
+
+   .c-value span {
+      font-size: 20px;
+      color: rgba(255, 255, 255, 0.486);
+   }
+
+   .c-area-2 button {
+      background: var(--Bright-Yellow);
+      width: 280px;
+      height: 45px;
+      border-radius: 0.5em;
+      border: 0px black;
+      color: white;
+      box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.178);
+   }
+
+   /* AREA 3 */
+
+   .c-area-3 {
+      border-radius: 0 0 0.5em 0.5em;
+      padding: 20px 20px 20px 20px;
    }
 }
