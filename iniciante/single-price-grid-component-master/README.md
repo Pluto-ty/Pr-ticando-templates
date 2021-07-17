@@ -32,7 +32,7 @@ O desafio é criar um layout simples. Utilizando Html, Css.
 
 -  Veja Funcionand: [Abrir Página](https://thyagoaraujom.github.io/Praticando-templates/iniciante/single-price-grid-component-master/index.html)
 
--  Origem do Template: [Origem do Template](https://www.frontendmentor.io/challenges/intro-component-with-signup-form-5cf91bd49edda32581d28fd1/hub/intro-component-with-signup-form-6PrgJXDtt)
+-  Origem do Template: [Origem do Template](https://www.frontendmentor.io/challenges/single-price-grid-component-5ce41129d0ff452fec5abbbc)
 
 <br>
 
