@@ -1,0 +1,75 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+:root {
+   --Blue: hsl(223, 87%, 63%);
+   --Pale-Blue: hsl(223, 100%, 88%);
+   --Light-Red: hsl(354, 100%, 66%);
+   --Gray: hsl(0, 0%, 59%);
+   --Very-Dark-Blue: hsl(209, 33%, 12%);
+}
+
+.c-container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin: 20px 0px 20px 0px;
+   font-family: "Libre Franklin", sans-serif;
+}
+
+.c-logo {
+   width: 75px;
+   margin-bottom: 40px;
+}
+
+.c-title {
+   font-size: 23px;
+   color: var(--Gray);
+   margin-bottom: 20px;
+}
+
+.c-title b {
+   color: var(--Very-Dark-Blue);
+}
+
+.c-text {
+   margin-bottom: 30px;
+}
+
+.c-input {
+   width: 270px;
+   height: 40px;
+   border-radius: 2em;
+   border: 1px solid var(--Pale-Blue);
+   padding-left: 30px;
+   margin-bottom: 10px;
+}
+
+.c-button {
+   width: 270px;
+   height: 40px;
+   border-radius: 2em;
+   border: 1px solid var(--Blue);
+   background: var(--Blue);
+   margin-bottom: 50px;
+}
+
+.c-dashboard {
+   width: 100%;
+   max-width: 320px;
+   margin-bottom: 80px;
+}
+
+.c-contact-icon {
+   display: flex;
+   justify-content: center;
+   gap: 20px;
+}
+.c-contact-icon img {
+   width: 40px;
+   padding: 8px;
+   border: 1px solid var(--Pale-Blue);
+   border-radius: 50%;
+}
