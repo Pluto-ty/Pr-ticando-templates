@@ -26,11 +26,17 @@
          <p class="c-text">Subscribe and get notified</p>
          <div class="c-input-container">
             <input
-               class="c-input"
+               id="js-input"
+               class="c-input blue"
                type="text"
                placeholder="Your email address..."
             />
-            <button class="c-button">Notify Me</button>
+            <p id="js-error-message" class="c-error-message">
+               Please provide a valid email address
+            </p>
+            <button onclick="emailValidation()" class="c-button">
+               Notify Me
+            </button>
          </div>
          <img
             class="c-dashboard"

@@ -41,10 +41,16 @@
    margin-bottom: 30px;
 }
 
+input:focus,
+button:focus {
+   outline: 0;
+}
+
 .c-input-container {
    display: flex;
+   position: relative;
    flex-direction: column;
-   gap: 10px;
+   gap: 20px;
 }
 
 .c-input {
@@ -56,11 +62,16 @@
    margin-bottom: 10px;
 }
 
-.c-input::placeholder {
+.c-input.blue::placeholder {
    color: var(--Pale-Blue);
 }
 
+.c-input.black::placeholder {
+   color: var(--Light-Red);
+}
+
 .c-button {
+   cursor: pointer;
    width: 270px;
    height: 40px;
    border-radius: 2em;
@@ -68,6 +79,14 @@
    background: var(--Blue);
    margin-bottom: 70px;
    color: white;
+}
+
+.c-error-message {
+   color: var(--Light-Red);
+   position: absolute;
+   top: 45px;
+   left: 55px;
+   font-size: 10px;
 }
 
 .c-dashboard {
@@ -84,6 +103,7 @@
    gap: 20px;
 }
 .c-contact-icon .c-icon-container {
+   cursor: pointer;
    width: 35px;
    height: 35px;
    padding: 0px;
@@ -146,6 +166,14 @@ footer p {
       background: var(--Blue);
       margin-bottom: 40px;
       color: white;
+   }
+
+   .c-error-message {
+      color: var(--Light-Red);
+      position: absolute;
+      top: 45px;
+      left: 30px;
+      font-size: 10px;
    }
 
    .c-dashboard {
