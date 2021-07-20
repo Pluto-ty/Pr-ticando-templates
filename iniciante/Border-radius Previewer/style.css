@@ -1,0 +1,80 @@
+* {
+   margin: 0px;
+   padding: 0px;
+   box-sizing: border-box;
+}
+
+.c-container {
+   width: 100vw;
+   height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background: #002;
+   font-size: 14px;
+}
+
+.c-box {
+   width: 200px;
+   height: 200px;
+   position: relative;
+   border: 3px dashed rgb(117, 117, 117);
+}
+
+.c-generator {
+   position: absolute;
+   width: 2.5em;
+   height: 2.5em;
+   cursor: pointer;
+   display: block;
+}
+
+.c-shape-generator {
+   width: 100%;
+   height: 100%;
+   background: cyan;
+}
+
+.c-top {
+   width: 1em;
+   height: 1em;
+   background: #ccc;
+   position: absolute;
+   top: -0.5em;
+   left: -0.5em;
+}
+
+.c-top::before {
+   content: "";
+}
+
+.c-right {
+   width: 1em;
+   height: 1em;
+   background: #ccc;
+   position: absolute;
+   top: -0.5em;
+   right: -0.5em;
+}
+
+.c-left {
+   left: -0.5em;
+   bottom: -0.5em;
+   width: 1em;
+   height: 1em;
+   background: #ccc;
+   position: absolute;
+}
+
+.c-bottom {
+   width: 1em;
+   height: 1em;
+   background: #ccc;
+   position: absolute;
+   bottom: -0.5em;
+   right: -0.5em;
+}
+
+.c-bottom::before {
+   content: "";
+}
