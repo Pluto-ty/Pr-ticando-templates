@@ -1,7 +1,9 @@
-var dragMeTop = document.getElementById("js-drag-me-top");
-var dragMeRight = document.getElementById("js-drag-me-right");
-var dragMeDown = document.getElementById("js-drag-me-down");
-var dragMeLeft = document.getElementById("js-drag-me-left");
+let left = document.getElementById("js-left");
+
+document.getElementById("js-left").addEventListener("change", function () {
+   document.getElementById("js-shape-generator").style.borderRadius =
+      left.value + "%";
+});
 
 var Draggable = function (elemento) {
    var that = this;
@@ -35,33 +37,8 @@ Draggable.prototype.onMouseDown = function (event) {
 Draggable.prototype.onMouseMove = function (event) {
    var diffX = event.x - this.posX;
    var diffY = event.y - this.posY;
-   let valueTop = this.top + diffY;
-   let valueLeft = this.left + diffX;
-
-   if (
-      this.elemento.classList[1] == "c-top" ||
-      this.elemento.classList[1] == "c-bottom"
-   ) {
-      if (valueTop >= 190) {
-         this.elemento.style.top = "190px";
-         return;
-      }
-      if (valueTop <= -5) {
-         this.elemento.style.top = "-5px";
-         return;
-      }
-      this.elemento.style.top = valueTop + "px";
-   } else {
-      if (valueLeft >= 190) {
-         this.elemento.style.left = "190px";
-         return;
-      }
-      if (valueLeft <= -5) {
-         this.elemento.style.left = "-5px";
-         return;
-      }
-      this.elemento.style.left = valueLeft + "px";
-   }
+   this.elemento.style.top = this.top + diffY + "px";
+   this.elemento.style.left = this.left + diffX + "px";
 };
 
 Draggable.prototype.onMouseUp = function (event) {
