@@ -9,12 +9,31 @@
    </head>
    <body>
       <div class="c-container">
-         <div class="c-box">
-            <div id="js-shape-generator" class="c-shape-generator"></div>
-            <input id="js-left" type="range" class="c-left" value="50" />
-            <input id="js-top" type="range" class="c-top" value="50" />
-            <input id="js-right" type="range" class="c-right" value="50" />
-            <input id="js-bottom" type="range" class="c-bottom" />
+         <div class="c-content-container">
+            <h2 class="c-title">Fancy Border-radius</h2>
+            <div class="c-box">
+               <div id="js-shape-generator" class="c-shape-generator"></div>
+               <input
+                  id="js-left"
+                  type="range"
+                  class="c-left draggable"
+                  value="50"
+               />
+               <input
+                  id="js-top"
+                  type="range"
+                  class="c-top draggable"
+                  value="50"
+               />
+               <input
+                  id="js-right"
+                  type="range"
+                  class="c-right draggable"
+                  value="50"
+               />
+               <input id="js-bottom" type="range" class="c-bottom draggable" />
+            </div>
+            <p id="js-border-radius" class="c-border-radius"></p>
          </div>
       </div>
       <script src="./script.js"></script>

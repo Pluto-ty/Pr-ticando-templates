@@ -1,17 +1,16 @@
 let left = document.getElementById("js-left");
-
-document.getElementById("js-left").addEventListener("change", function () {
-   document.getElementById("js-shape-generator").style.borderRadius =
-      left.value + "%";
-});
-
+let right = document.getElementById("js-right");
+let tops = document.getElementById("js-top");
+let bottom = document.getElementById("js-bottom");
+document.getElementById("js-border-radius").innerHTML = `Border-Radius: ${
+   tops.value
+}% ${(tops.value - 100) * -1}% ${bottom.value}% ${
+   (bottom.value - 100) * -1
+}% / ${left.value}% ${right.value}% ${(right.value - 100) * -1}% ${
+   (left.value - 100) * -1
+}%`;
 var Draggable = function (elemento) {
-   var that = this;
-   this.elemento = elemento;
-   this.posX = 0;
-   this.posY = 0;
-   this.top = 0;
-   this.left = 0;
+   elementoAtual = elemento;
    this.refMouseUp = function (event) {
       that.onMouseUp(event);
    };
@@ -20,33 +19,27 @@ var Draggable = function (elemento) {
       that.onMouseMove(event);
    };
 
-   this.elemento.addEventListener("mousedown", function (event) {
-      that.onMouseDown(event);
+   elemento.addEventListener("mousedown", function (event) {
+      elemento.classList.add("dragging");
+
+      window.addEventListener("mousemove", function () {
+         let topValue = (tops.value - 100) * -1;
+         let leftValue = (left.value - 100) * -1;
+         let rightValue = (right.value - 100) * -1;
+         let bottomValue = (bottom.value - 100) * -1;
+         document.getElementById(
+            "js-shape-generator"
+         ).style.borderRadius = `${tops.value}% ${topValue}% ${bottomValue}% ${bottom.value}% / ${left.value}% ${right.value}% ${rightValue}% ${leftValue}%`;
+         document.getElementById(
+            "js-border-radius"
+         ).innerHTML = `Border-Radius: ${tops.value}% ${topValue}% ${bottomValue}% ${bottom.value}% / ${left.value}% ${right.value}% ${rightValue}% ${leftValue}%`;
+      });
+
+      window.addEventListener("mouseup", function () {
+         window.removeEventListener("mousemove", this.refMouseMove);
+         window.removeEventListener("mouseup", this.refMouseUp);
+      });
    });
-};
-
-Draggable.prototype.onMouseDown = function (event) {
-   this.posX = event.x;
-   this.posY = event.y;
-
-   this.elemento.classList.add("dragging");
-   window.addEventListener("mousemove", this.refMouseMove);
-   window.addEventListener("mouseup", this.refMouseUp);
-};
-
-Draggable.prototype.onMouseMove = function (event) {
-   var diffX = event.x - this.posX;
-   var diffY = event.y - this.posY;
-   this.elemento.style.top = this.top + diffY + "px";
-   this.elemento.style.left = this.left + diffX + "px";
-};
-
-Draggable.prototype.onMouseUp = function (event) {
-   this.top = parseInt(this.elemento.style.top.replace(/\D/g, "")) || 0;
-   this.left = parseInt(this.elemento.style.left.replace(/\D/g, "")) || 0;
-   this.elemento.classList.remove("dragging");
-   window.removeEventListener("mousemove", this.refMouseMove);
-   window.removeEventListener("mouseup", this.refMouseUp);
 };
 
 var draggables = document.querySelectorAll(".draggable");
