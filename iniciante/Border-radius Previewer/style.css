@@ -3,6 +3,8 @@
    margin: 0px;
    padding: 0px;
    box-sizing: border-box;
+   overflow: hidden;
+   font-family: "M PLUS Rounded 1c", sans-serif;
 }
 
 /* Container & Box */
@@ -10,7 +12,6 @@
    width: 100vw;
    height: 100vh;
    max-height: 100vh;
-   overflow: hidden;
    display: flex;
    align-items: center;
    justify-content: center;
@@ -18,12 +19,9 @@
    font-size: 14px;
    flex-direction: column;
    gap: 20px;
-   overflow: hidden;
 }
 
 .c-container:after {
-   overflow-y: hidden;
-   overflow-x: hidden;
    content: "";
    width: 90vmin;
    height: 90vmin;
@@ -92,16 +90,18 @@
    z-index: 2;
    display: flex;
    align-items: center;
-   justify-content: center;
+
    font-size: 14px;
    flex-direction: column;
    gap: 20px;
+   overflow: visible;
 }
 .c-box {
    width: 378px;
    height: 379px;
    position: relative;
    border: 3px dashed rgb(117, 117, 117);
+   overflow: visible;
 }
 
 .c-shape-generator {
@@ -114,7 +114,8 @@
 /* Title */
 
 .c-title {
-   color: white;
+   color: #ccc;
+   font-size: 37px;
 }
 
 /* Inputs Range */
@@ -122,6 +123,7 @@ input[type="range"] {
    width: 382px;
    -webkit-appearance: none;
    position: absolute;
+   overflow: visible;
 }
 
 .c-left {
@@ -131,11 +133,13 @@ input[type="range"] {
    left: 3px;
    transform: rotate(90deg);
    transform-origin: 0px 0px;
+   overflow: visible;
 }
 
 .c-top {
    top: -4px;
    left: -5px;
+   overflow: visible;
 }
 
 .c-right {
@@ -143,11 +147,13 @@ input[type="range"] {
    right: -387px;
    transform: rotate(90deg);
    transform-origin: 0px 0px;
+   overflow: visible;
 }
 
 .c-bottom {
    bottom: 3px;
    left: -5px;
+   overflow: visible;
 }
 
 input[type="range"]::-webkit-slider-thumb {
@@ -160,14 +166,46 @@ input[type="range"]::-webkit-slider-thumb {
    cursor: pointer;
    -webkit-appearance: none;
    margin-top: -1px;
+   overflow: visible;
 }
 
 input[type="range"]::-webkit-slider-runnable-track {
    cursor: pointer;
    height: -0px;
+   overflow: visible;
 }
 
 /* Border-radius Text */
 .c-border-radius {
    color: white;
+   display: flex;
+   align-items: center;
+   font-size: 22px;
+}
+
+.c-border-radius span {
+   display: block;
+   background: #ccc;
+   color: #000;
+   padding: 10px;
+   margin-left: 20px;
+   font-size: 18px;
+   height: 48px;
+   border-radius: 0.1em 0 0 0.1em;
+}
+
+.c-border-radius button {
+   font-weight: bold;
+   background: #f09;
+   border: 0px;
+   font-size: 24px;
+   color: #ccc;
+   padding: 6px 10px;
+   border-radius: 0 0.1em 0.1em 0;
+   cursor: pointer;
+}
+
+.c-border-radius button:hover {
+   background: #3023ae;
+   transition: 1s;
 }
