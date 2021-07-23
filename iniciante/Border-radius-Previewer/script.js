@@ -25,6 +25,14 @@ var Draggable = function (elemento) {
       elemento.classList.add("dragging");
 
       window.addEventListener("mousemove", function () {
+         topValue = (tops.value - 100) * -1;
+         leftValue = (left.value - 100) * -1;
+         rightValue = (right.value - 100) * -1;
+         bottomValue = (bottom.value - 100) * -1;
+         document.getElementById(
+            "js-box-copy"
+         ).style.borderRadius = `${tops.value}% ${topValue}% ${bottomValue}% ${bottom.value}% / ${left.value}% ${right.value}% ${rightValue}% ${leftValue}%`;
+
          document.getElementById(
             "js-shape-generator"
          ).style.borderRadius = `${tops.value}% ${topValue}% ${bottomValue}% ${bottom.value}% / ${left.value}% ${right.value}% ${rightValue}% ${leftValue}%`;
