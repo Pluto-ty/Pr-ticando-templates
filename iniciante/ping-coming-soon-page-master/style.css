@@ -138,20 +138,31 @@ footer p {
    }
 
    .c-logo {
-      width: 70px;
+      width: 90px;
       margin-bottom: 20px;
    }
 
    .c-text {
-      font-size: 14px;
+      font-size: 16px;
       margin-bottom: 30px;
    }
 
    .c-title {
       font-weight: normal;
-      font-size: 30px;
+      font-size: 34px;
       color: var(--Gray);
       margin-bottom: 10px;
+   }
+
+   .c-input {
+      width: 380px;
+      height: 50px;
+      margin-bottom: 50px;
+      font-size: 16px;
+   }
+
+   .c-input::placeholder {
+      font-size: 16px;
    }
    .c-input-container {
       display: flex;
@@ -160,25 +171,26 @@ footer p {
    }
    .c-button {
       width: 150px;
-      height: 40px;
+      height: 50px;
       border-radius: 2em;
       border: 1px solid var(--Blue);
       background: var(--Blue);
       margin-bottom: 40px;
       color: white;
+      font-size: 16px;
    }
 
    .c-error-message {
       color: var(--Light-Red);
       position: absolute;
-      top: 45px;
+      top: 55px;
       left: 30px;
-      font-size: 10px;
+      font-size: 14px;
    }
 
    .c-dashboard {
       width: 100%;
-      max-width: 430px;
+      max-width: 630px;
       margin-bottom: 20px;
    }
 
