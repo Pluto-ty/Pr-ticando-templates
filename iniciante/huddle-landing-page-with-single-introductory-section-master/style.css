@@ -1,0 +1,270 @@
+/* Config Geral */
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+body {
+   background: var(--Violet);
+   font-family: "Open Sans", sans-serif;
+}
+
+:root {
+   --Violet: hsl(257, 40%, 49%);
+   --Soft-Magenta: hsl(300, 69%, 71%);
+}
+
+/* Container */
+
+.c-container-geral {
+   width: 100vw;
+   height: 100vh;
+   padding-top: 40px;
+   max-height: 900px;
+}
+
+.c-container {
+   display: grid;
+   grid:
+      "logo"
+      "content"
+      "contact";
+   margin: 0px 100px 0px 80px;
+   gap: 20px;
+   height: 100%;
+}
+
+/* Logo  */
+
+.c-logo {
+   grid-area: "logo";
+   margin-bottom: 30px;
+   width: 200px;
+}
+
+/* Content */
+
+.c-content {
+   grid-area: "content";
+   display: grid;
+   grid:
+      "illustration content"
+      "illustration content";
+}
+
+.c-illustration-img {
+   grid-area: "illustration";
+}
+
+.c-content-text {
+   grid-area: "content";
+   margin: 50px 0 0 60px;
+}
+
+.c-content-text h1 {
+   font-family: "Poppins", sans-serif;
+   font-size: 40px;
+   width: 80%;
+   color: white;
+}
+
+.c-content-text p {
+   color: white;
+   line-height: 1.5em;
+   font-size: 18px;
+   width: 87%;
+}
+
+.c-content-text button {
+   margin-top: 20px;
+   width: 180px;
+   height: 50px;
+   border-radius: 2em;
+   border: 1px white;
+   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.301);
+   font-size: 18px;
+   color: var(--Violet);
+}
+
+.c-content-text button:hover {
+   background: var(--Soft-Magenta);
+   color: white;
+}
+
+/* Redes */
+
+.c-contact {
+   grid-area: "contact";
+   display: flex;
+   list-style-type: none;
+   justify-content: flex-end;
+   gap: 10px;
+   margin-top: 20px;
+   margin-right: 60px;
+}
+
+.c-contact-icons {
+   width: 40px;
+   height: 40px;
+   border: 1px white solid;
+   border-radius: 50%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.c-face-icon {
+   width: 28px;
+}
+
+.c-twitter-icon {
+   width: 20px;
+}
+
+.c-insta-icon {
+   width: 30px;
+   height: 30px;
+}
+
+@media (max-width: 1300px) {
+   .c-content-text {
+      grid-area: "content";
+      margin: 0px 0 0 60px;
+   }
+   .c-content-text h1 {
+      font-family: "Poppins", sans-serif;
+      font-size: 34px;
+      width: 80%;
+      color: white;
+   }
+   .c-illustration-img {
+      grid-area: "illustration";
+      width: 600px;
+   }
+}
+
+@media (max-width: 1100px) {
+   .c-container {
+      display: grid;
+      grid:
+         "logo"
+         "content"
+         "contact";
+      margin: 0px 40px 0px 40px;
+      gap: 20px;
+      height: 100%;
+   }
+
+   .c-logo {
+      grid-area: "logo";
+      margin-bottom: 30px;
+      width: 200px;
+   }
+
+   .c-content-text {
+      grid-area: "content";
+      margin: 0px 0 0 40px;
+   }
+   .c-content-text h1 {
+      font-family: "Poppins", sans-serif;
+      font-size: 32px;
+      width: 80%;
+      color: white;
+      line-height: 1.2em;
+      margin-bottom: 10px;
+   }
+
+   .c-content-text p {
+      font-size: 16px;
+   }
+   .c-illustration-img {
+      grid-area: "illustration";
+      width: 540px;
+   }
+   .c-contact {
+      grid-area: "contact";
+      display: flex;
+      list-style-type: none;
+      justify-content: flex-end;
+      gap: 10px;
+      margin-top: 20px;
+      margin-right: 20px;
+   }
+}
+
+@media (max-width: 840px) {
+   .c-logo {
+      grid-area: "logo";
+      margin: 0 0;
+      width: 150px;
+   }
+
+   .c-container {
+      display: grid;
+      grid:
+         "logo" 70px
+         "content"
+         "contact";
+      margin: 0px 35px 0px 35px;
+      gap: 20px;
+      height: 100%;
+   }
+
+   .c-content {
+      grid-area: "content";
+      display: grid;
+      grid:
+         "illustration"
+         "content";
+   }
+
+   .c-illustration-img {
+      grid-area: "illustration";
+      margin: 0 auto;
+      width: 100%;
+      max-width: 550px;
+   }
+
+   .c-content-text {
+      margin: 20px auto 0 auto;
+      text-align: center;
+   }
+
+   .c-content-text h1 {
+      font-family: "Poppins", sans-serif;
+      font-size: 23px;
+      width: 100%;
+      color: white;
+      line-height: 1.5em;
+      margin: 0px 0px 20px 0;
+   }
+
+   .c-content-text p {
+      margin: 0px 0px 10px;
+      width: 100%;
+      font-size: 16px;
+   }
+
+   .c-content-text button {
+      margin-top: 20px;
+      width: 230px;
+      height: 50px;
+      border-radius: 2em;
+      border: 1px white;
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.301);
+      font-size: 16px;
+   }
+
+   .c-contact {
+      grid-area: "contact";
+      display: flex;
+      list-style-type: none;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 0px;
+      margin-right: 0px;
+      align-self: flex-end;
+      margin-bottom: 20px;
+   }
+}
