@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="./style.css" />
+      <title>Calculator</title>
+   </head>
+   <body>
+      <div class="c-container">
+         <input id="js-input" type="text" />
+         <div class="c-buttons">
+            <div onclick="clearLastWord()">C</div>
+            <div onclick="clearAll()">CA</div>
+            <div onclick="writeValue(this)">+/-</div>
+            <div onclick="writeValue(this)">÷</div>
+            <div onclick="writeValue(this)">7</div>
+            <div onclick="writeValue(this)">8</div>
+            <div onclick="writeValue(this)">9</div>
+            <div onclick="writeValue(this)">x</div>
+            <div onclick="writeValue(this)">4</div>
+            <div onclick="writeValue(this)">5</div>
+            <div onclick="writeValue(this)">6</div>
+            <div onclick="writeValue(this)">-</div>
+            <div onclick="writeValue(this)">1</div>
+            <div onclick="writeValue(this)">2</div>
+            <div onclick="writeValue(this)">3</div>
+            <div onclick="writeValue(this)">+</div>
+            <span></span>
+            <div onclick="writeValue(this)">0</div>
+            <div onclick="writeValue(this)">.</div>
+            <div onclick="result()">=</div>
+         </div>
+      </div>
+      <script src="script.js"></script>
+   </body>
+</html>
