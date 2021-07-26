@@ -36,33 +36,31 @@ dispositivo móvel para entender melhor a funcionalidade básica e casos extremo
 
 ## Histórias de usuários
 
--  [] O usuário pode ver uma tela mostrando o número atual inserido ou o
-   resultado da última operação.
--  [] O usuário pode ver um painel de entrada contendo botões para os dígitos 0-9,
-   operações - '+', '-', '/' e '=', um botão 'C' (para limpar) e um 'AC'
-   botão (para limpar tudo).
--  [] O usuário pode inserir números como sequências de até 8 dígitos clicando em
-   dígitos no teclado de entrada. A entrada de qualquer dígito superior a 8 será ignorada.
--  [] O usuário pode clicar em um botão de operação para exibir o resultado dessa
-   operação em:
-   _ o resultado da operação anterior e o último número inserido OU
-   _ os dois últimos números inseridos OU \* o último número inserido
--  [] O usuário pode clicar no botão 'C' para limpar o último número ou o último
-   Operação. Se a última entrada do usuário foi uma operação, o display será
-   atualizado para o valor que o precedeu.
--  [] O usuário pode clicar no botão 'AC' para limpar todas as áreas de trabalho internas e
-   para definir a exibição para 0.
--  [] O usuário pode ver 'ERR' exibido se qualquer operação exceder o
-   Máximo de 8 dígitos.
+-  [x] O usuário pode ver uma tela mostrando o número atual inserido ou o
+       resultado da última operação.
+-  [x] O usuário pode ver um painel de entrada contendo botões para os dígitos 0-9,
+       operações - '+', '-', '/' e '=', um botão 'C' (para limpar) e um 'AC'
+       botão (para limpar tudo).
+-  [x] O usuário pode inserir números como sequências de até 8 dígitos clicando em
+       dígitos no teclado de entrada. A entrada de qualquer dígito superior a 8 será ignorada.
+-  [x] O usuário pode clicar em um botão de operação para exibir o resultado dessa
+       operação.
+-  [x] O usuário pode clicar no botão 'C' para limpar o último número ou o último
+       Operação. Se a última entrada do usuário foi uma operação, o display será
+       atualizado para o valor que o precedeu.
+-  [x] O usuário pode clicar no botão 'AC' para limpar todas as áreas de trabalho internas e
+       para definir a exibição para 0.
+-  [x] O usuário pode ver 'ERR' exibido se qualquer operação exceder o
+       Máximo de 8 dígitos.
 
 ## Recursos bônus
 
--  [] O usuário pode clicar em um botão '+/-' para alterar o sinal do número que é
-   atualmente exibido.
--  [] O usuário pode ver um botão de ponto decimal ('.') No teclado de entrada para isso
-permite que números de ponto flutuante de até 3 lugares sejam inseridos e operações para
-ser realizada com o número máximo de casas decimais inseridas para qualquer um
-número.
+-  [x] O usuário pode clicar em um botão '+/-' para alterar o sinal do número que é
+       atualmente exibido.
+-  [x] O usuário pode ver um botão de ponto decimal ('.') No teclado de entrada para isso
+    permite que números de ponto flutuante de até 3 lugares sejam inseridos e operações para
+    ser realizada com o número máximo de casas decimais inseridas para qualquer um
+    número.
 </p>
 
 <h3 id="screenshot" align="center"> Screenshot </h3>
@@ -74,7 +72,7 @@ número.
 
 <h3 id="links" align="center"> Links </h3>
 
--  Veja Funcionand: [Abrir Página](https://thyagoaraujom.github.io/Praticando-templates/iniciante/bin2Dec/index.html)
+-  Veja Funcionand: [Abrir Página](https://thyagoaraujom.github.io/Praticando-templates/iniciante/Calculadora/index.html)
 
 -  Origem do Desafio: [Origem do Template](https://github.com/florinpop17/app-ideas)
 
@@ -89,12 +87,12 @@ número.
 
 -  Html
 -  Css (BEM)
--  Javascript ( Criar verificação dos números e convertelos para decimais)
+-  Javascript ( Criar toda a aplicação para a calculadora)
 
 <h3 id="o-que-aprendi" align="center"> O que usei e aprendi: </h3>
 <br>
 <p>
-Neste desafio utilizei o básico de css só para a visualização da aplicação. Usei verificação rápida com if para caso o usuário coloque um valor inválido ao desejado e a função parseInt() para a conversão, que converte para você automaticamente uma string em número e depois converte o valor binário em decimal e assim retornando para o input onde o valor decimal deve ser colocado.
+Neste desafio utilizei o básico de css só para a visualização da aplicação. O javascript que fez tudo funcionar.
 </p>
 
 ---

@@ -5,19 +5,24 @@ let nextValue = false;
 let total = 0;
 
 function clearLastWord() {
-   let string = document.getElementById("js-input").value;
-   document.getElementById("js-input").value = string.substring(
-      0,
-      string.length - 1
-   );
-   value1 = document.getElementById("js-input").value;
+   if (Actualoperation != "" && value2 == "") {
+      Actualoperation = "";
+      nextValue = false;
+   } else {
+      let string = document.getElementById("js-input").value;
+      document.getElementById("js-input").value = string.substring(
+         0,
+         string.length - 1
+      );
+      value1 = document.getElementById("js-input").value;
+   }
 }
 
 function clearAll() {
    value1 = 0;
    value2 = 0;
    Actualoperation = "";
-   document.getElementById("js-input").value = "";
+   document.getElementById("js-input").value = "0";
    nextValue = false;
    total = 0;
 }
@@ -28,27 +33,20 @@ function writeValue(value) {
       let valueCliqued = value.innerHTML;
       if (valueCliqued == "+/-") {
          if (valueInput != "") {
-            console.log(value1);
             document.getElementById("js-input").value =
                parseInt(valueInput) * -1;
-            if (
-               value1 != "" ||
-               value1 - parseInt(document.getElementById("js-input").value) ==
-                  0 ||
-               value1 + parseInt(document.getElementById("js-input").value) == 0
-            ) {
-               value1 = parseInt(document.getElementById("js-input").value);
-            } else if (value2 != "") {
-               value2 = parseInt(document.getElementById("js-input").value);
-            }
          } else {
             return;
          }
       } else {
          if (document.getElementById("js-input").value.length < 8) {
-            document.getElementById(
-               "js-input"
-            ).value = `${valueInput}${valueCliqued}`;
+            if (valueInput == "0") {
+               document.getElementById("js-input").value = `${valueCliqued}`;
+            } else {
+               document.getElementById(
+                  "js-input"
+               ).value = `${valueInput}${valueCliqued}`;
+            }
          } else {
             return;
          }
@@ -61,7 +59,6 @@ function writeValue(value) {
       let valueCliqued = value.innerHTML;
       if (valueCliqued == "+/-") {
          if (valueInput != "") {
-            console.log(value1);
             document.getElementById("js-input").value =
                parseInt(valueInput) * -1;
             if (
@@ -84,7 +81,6 @@ function writeValue(value) {
 }
 
 function operation(operationCliqued) {
-   console.log(document.getElementById("js-input").value);
    if (document.getElementById("js-input").value == "") {
       return;
    } else {
@@ -95,7 +91,6 @@ function operation(operationCliqued) {
       }
 
       if (value1 != "" && value2 != "" && Actualoperation != "") {
-         console.log(value1, value2, Actualoperation);
          if (Actualoperation == "÷") {
             total = parseInt(value1) / parseInt(value2);
          } else if (Actualoperation == "x") {
@@ -105,10 +100,20 @@ function operation(operationCliqued) {
          } else if (Actualoperation == "+") {
             total = parseInt(value1) + parseInt(value2);
          }
-         document.getElementById("js-input").value = total;
-         value1 = total;
-         value2 = "";
-         Actualoperation = "";
+
+         if (String(total.toFixed(3)).length > 8) {
+            document.getElementById("js-input").value = "Err";
+            nextValue = true;
+            value1 = "";
+            value2 = "";
+            Actualoperation = "";
+            return;
+         } else {
+            document.getElementById("js-input").value = total.toFixed(3);
+            value1 = total;
+            value2 = "";
+            Actualoperation = "";
+         }
       }
       Actualoperation = operationCliqued.innerHTML;
       nextValue = true;
@@ -130,10 +135,19 @@ function result() {
       } else if (Actualoperation == "+") {
          total = parseInt(value1) + parseInt(value2);
       }
-      document.getElementById("js-input").value = total;
-      value1 = total;
-      value2 = "";
-      Actualoperation = "";
+      console.log(total);
+      if (String(total.toFixed(3)).length > 8) {
+         document.getElementById("js-input").value = "Err";
+         nextValue = true;
+         value1 = "";
+         value2 = "";
+         Actualoperation = "";
+      } else {
+         document.getElementById("js-input").value = total.toFixed(3);
+         value1 = total;
+         value2 = "";
+         Actualoperation = "";
+      }
    } else {
       return;
    }
