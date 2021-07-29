@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+         rel="stylesheet"
+      />
+
+      <link
+         rel="icon"
+         type="image/png"
+         sizes="32x32"
+         href="./images/favicon-32x32.png"
+      />
+      <link rel="stylesheet" href="./style.css" />
+      <title>Tip calculator app</title>
+   </head>
+   <body>
+      <div class="c-geral-container">
+         <img class="c-logo" src="./images/logo.svg" alt="" />
+         <div class="c-content-container">
+            <p class="c-bill">Bill</p>
+            <div class="c-input-value-container">
+               <input id="js-value-input" type="number" />
+               <label for="js-value-input">$</label>
+            </div>
+
+            <p class="c-select-tip">Select Tip %</p>
+
+            <div class="c-grid-percen">
+               <p>5%</p>
+               <p>10%</p>
+               <p>15%</p>
+               <p>25%</p>
+               <p>50%</p>
+               <p>Custom</p>
+            </div>
+
+            <div class="c-input-people-container">
+               <p>Number of People</p>
+               <input id="js-people-input" type="text" />
+               <label for="js-people-input"></label>
+            </div>
+            <div class="c-result-container">
+               <p>
+                  Tip Amount <br />
+                  <span> / person</span>
+               </p>
+               <p id="js-tip-amount">$0</p>
+
+               <p>
+                  Total <br />
+                  <span>/ person</span>
+               </p>
+               <p id="js-total">$0</p>
+               <button>RESET</button>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>

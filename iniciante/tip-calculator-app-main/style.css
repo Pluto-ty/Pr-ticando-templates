@@ -1,0 +1,139 @@
+/* Config Geral */
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+:root {
+   --Strong-cyan: hsl(172, 67%, 45%);
+   --Very--dark--cyan: hsl(183, 100%, 15%);
+   --Dark--grayish--cyan: hsl(186, 14%, 43%);
+   --Dark-grayish-cyan: hsl(184, 14%, 56%);
+   --Light-grayish-cyan: hsl(185, 41%, 84%);
+   --Light-grayish-cyan: hsl(189, 41%, 97%);
+   --White: hsl(0, 0%, 100%);
+}
+
+body {
+   background: var(--Light-grayish-cyan);
+}
+/* Logo / Container Geral */
+.c-geral-container {
+   width: 100vw;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   font-family: "Space Mono", monospace;
+}
+
+.c-logo {
+   width: 80px;
+   margin: 40px auto;
+}
+
+/* Content / Input */
+.c-content-container {
+   width: 100%;
+   padding: 20px;
+   background: var(--White);
+   border-radius: 1em;
+}
+
+.c-bill {
+   color: var(--Very--dark--cyan);
+   font-weight: bold;
+   margin-bottom: 10px;
+}
+
+.c-input-value-container {
+   width: 100%;
+   position: relative;
+   margin-bottom: 30px;
+}
+
+.c-input-value-container input,
+.c-input-people-container input {
+   width: 100%;
+   height: 30px;
+   border: 0px;
+   background: hsl(180, 42%, 95%);
+   border-radius: 0.5em;
+   color: var(--Very--dark--cyan);
+   font-size: 20px;
+   font-weight: bold;
+   text-align: end;
+}
+
+.c-input-value-container label,
+.c-input-people-container label {
+   position: absolute;
+   left: 0;
+   top: 5px;
+   font-size: 18px;
+   color: var(--Dark-grayish-cyan);
+}
+
+input:focus,
+button:focus {
+   outline: 0;
+}
+
+.c-select-tip {
+   color: var(--Very--dark--cyan);
+   font-weight: bold;
+   margin-bottom: 10px;
+}
+
+.c-grid-percen {
+   gap: 20px;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   margin-bottom: 20px;
+}
+
+.c-grid-percen p {
+   background: var(--Very--dark--cyan);
+   color: var(--White);
+   text-align: center;
+   padding: 5px;
+   font-size: 22px;
+   font-weight: normal;
+   border-radius: 0.3em;
+}
+
+.c-input-people-container {
+   width: 100%;
+   position: relative;
+   margin-bottom: 20px;
+}
+
+.c-input-people-container p {
+   color: var(--Very--dark--cyan);
+   font-weight: bold;
+   margin-bottom: 10px;
+}
+
+.c-result-container {
+   width: 100%;
+   background: var(--Very--dark--cyan);
+   border-radius: 0.5em;
+   padding: 20px 10px;
+}
+
+.c-result-container p {
+   color: white;
+   margin-bottom: 20px;
+}
+
+.c-result-container button {
+   width: 100%;
+   height: 45px;
+   border-radius: 0.3em;
+   border: 0;
+   background: var(--Strong-cyan);
+   font-size: 18px;
+   font-weight: bold;
+   color: var(--Very--dark--cyan);
+}
