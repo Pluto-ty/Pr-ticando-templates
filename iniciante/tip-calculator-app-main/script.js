@@ -77,6 +77,8 @@ function calcs() {
 }
 
 function reset() {
+   let value = parseInt(document.getElementById("js-value-input").value);
+   let people = parseInt(document.getElementById("js-people-input").value);
    if (value > 0 && people > 0 && tipValue != "") {
       document.getElementById("js-value-input").value = 0;
       document.getElementById("js-people-input").value = 0;
