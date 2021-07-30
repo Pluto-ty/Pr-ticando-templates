@@ -63,7 +63,7 @@ function calcs() {
    }
 
    if (value > 0 && people > 0 && tipValue != "") {
-      document.getElementById("js-button").classList.toggle("on");
+      document.getElementById("js-button").classList.add("on");
       let tipAmount = (value * percen) / 100 / people;
       let personAmount = value / people + tipAmount;
       console.log(tipAmount, personAmount, value / people);
@@ -73,6 +73,8 @@ function calcs() {
       document.getElementById("js-total").innerHTML = `$${personAmount.toFixed(
          3
       )}`;
+   } else {
+      document.getElementById("js-button").classList.remove("on");
    }
 }
 
