@@ -73,12 +73,22 @@ body {
 }
 
 .c-input-value-container input.green,
+<<<<<<< Updated upstream
 .c-input-people-container input.green {
+=======
+.c-input-people-container input.green,
+.c-grid-percen input.green {
+>>>>>>> Stashed changes
    border: 2px var(--Strong-cyan) solid;
 }
 
 .c-input-value-container input.red,
+<<<<<<< Updated upstream
 .c-input-people-container input.red {
+=======
+.c-input-people-container input.red,
+.c-grid-percen input.red {
+>>>>>>> Stashed changes
    border: 2px red solid;
 }
 
@@ -131,6 +141,7 @@ button:focus {
    border-radius: 0.3em;
    cursor: pointer;
    transition: 0.3s ease-in-out;
+<<<<<<< Updated upstream
 }
 
 .c-grid-percen p:hover {
@@ -159,6 +170,36 @@ button:focus {
    background: var(--Strong-cyan);
 }
 
+=======
+}
+
+.c-grid-percen p:hover {
+   background: hsla(172, 67%, 45%, 0.658);
+   color: var(--Very--dark--cyan);
+   font-weight: bold;
+}
+
+.c-grid-percen input {
+   width: 100%;
+   border: 0px;
+   background: hsl(180, 42%, 95%);
+   color: var(--Very--dark--cyan);
+   font-weight: bold;
+   text-align: center;
+}
+
+.c-grid-percen input::placeholder {
+   color: var(--Very--dark--cyan);
+   font-weight: bold;
+   font-size: 18px;
+   font-family: "Space Mono", monospace;
+}
+
+.c-grid-percen p.on {
+   background: var(--Strong-cyan);
+}
+
+>>>>>>> Stashed changes
 /* Second input */
 .c-input-people-container {
    width: 100%;

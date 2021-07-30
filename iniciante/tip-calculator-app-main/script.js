@@ -24,7 +24,19 @@ for (let i of tip) {
 
 function customValue() {
    let custom = parseInt(document.getElementById("js-custom-value").value);
+<<<<<<< Updated upstream
    tipValue = custom;
+=======
+
+   if (custom > 0) {
+      tipValue = custom;
+      document.getElementById("js-custom-value").classList.add("green");
+      document.getElementById("js-custom-value").classList.remove("red");
+   } else {
+      document.getElementById("js-custom-value").classList.add("red");
+      document.getElementById("js-custom-value").classList.remove("green");
+   }
+>>>>>>> Stashed changes
    for (let color of tip) {
       color.classList.remove("on");
    }
