@@ -1,0 +1,214 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   width: 100vw;
+   height: 100vh;
+   background: rgb(25, 21, 26);
+}
+
+.c-container-geral {
+   background: rgb(25, 21, 26);
+   width: 100vw;
+   height: 100vh;
+   display: grid;
+   grid:
+      "lights" 200px
+      "input" 1fr;
+}
+.c-container {
+   background: rgbrgb(25, 21, 26);
+   width: 100%;
+   height: 100%;
+   display: flex;
+   justify-content: center;
+   grid-area: "lights'";
+}
+
+.c-sphere {
+   position: relative;
+   width: 100%;
+   height: 100%;
+   max-width: 50px;
+   max-height: 50px;
+   border-radius: 50%;
+   margin-top: 10px;
+   transition: 0.3s ease-in-out;
+}
+
+.c-sphere.green,
+.c-sphere.red,
+.c-sphere.yellow,
+.c-sphere.blue {
+   background: rgba(87, 8, 107, 0.514);
+}
+
+.c-sphere.green.on {
+   background: green;
+   animation: light-up-green 1s ease-in-out alternate infinite;
+}
+
+@keyframes light-up-green {
+   50% {
+      box-shadow: none;
+   }
+
+   100%,
+   0% {
+      box-shadow: 0px 0px 20px 5px green;
+   }
+}
+
+.c-sphere.red.on {
+   background: red;
+   animation: light-up-red 1s ease-in-out alternate infinite;
+}
+
+@keyframes light-up-red {
+   0%,
+   100% {
+      box-shadow: none;
+   }
+
+   50% {
+      box-shadow: 0px 0px 20px 5px rgb(255, 0, 0);
+   }
+}
+
+.c-sphere.blue.on {
+   background: blue;
+   animation: light-up-blue 1s ease-in-out alternate infinite;
+}
+
+@keyframes light-up-blue {
+   0%,
+   100% {
+      box-shadow: 0px 0px 20px 5px blue;
+   }
+
+   50% {
+      box-shadow: none;
+   }
+}
+
+.c-sphere.yellow.on {
+   background: yellow;
+   animation: light-up-yellow 1s ease-in-out alternate infinite;
+}
+
+@keyframes light-up-yellow {
+   0%,
+   100% {
+      box-shadow: none;
+   }
+
+   50% {
+      box-shadow: 0px 0px 20px 5px yellow;
+   }
+}
+
+.c-sphere + .c-sphere {
+   margin-left: 30px;
+}
+
+.c-sphere:last-child::after {
+   content: "";
+   position: absolute;
+   border: none;
+}
+
+.c-sphere::after {
+   position: absolute;
+   content: "";
+   top: -20px;
+   left: 30px;
+   position: absolute;
+   width: 70px;
+   height: 18.6666666667px;
+   border-bottom: solid #222 2px;
+   border-radius: 50%;
+}
+
+.c-sphere:before {
+   position: absolute;
+   content: "";
+   height: 15px;
+   width: 15px;
+   left: 17.5px;
+   top: -15px;
+   margin: 0;
+   padding: 0;
+   display: block;
+   background: rgb(68, 53, 73);
+   border-radius: 2px;
+   display: inline-block;
+   border-bottom: 2px solid rgb(97, 81, 107);
+}
+
+.c-content {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   width: 50%;
+   margin: 0 auto;
+}
+
+.c-content h1 {
+   color: white;
+   font-size: 50px;
+}
+
+.c-content .c-button-inputs {
+   width: 80%;
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
+}
+
+.btn-on-of {
+   width: 50px;
+   height: 50px;
+   border-radius: 50%;
+   background: rgba(0, 0, 0, 0);
+   border: 2px solid rgb(184, 134, 222);
+   color: white;
+}
+
+.btn-on-of:hover {
+   background: rgb(184, 134, 222);
+}
+
+.c-content p {
+   color: white;
+   margin-right: 10px;
+   font-size: 20px;
+}
+
+.c-content input {
+   height: 40px;
+   border-radius: 1em 0 0 1em;
+   width: 70px;
+   border: 0;
+}
+.c-input {
+   display: flex;
+   align-items: center;
+}
+
+.c-run {
+   color: white;
+   background: rgba(0, 0, 0, 0);
+   border: 2px solid rgb(184, 134, 222);
+   height: 35px;
+   margin-left: 3px;
+   padding: 8px;
+   border-radius: 0 1em 1em 0;
+   text-align: center;
+}
+
+.c-run:hover {
+   background: rgb(184, 134, 222);
+}

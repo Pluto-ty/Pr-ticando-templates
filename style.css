@@ -255,8 +255,12 @@ footer a + a {
 
    .c-mobile-img {
       position: absolute;
-      width: 170px;
-      height: 350px;
+      width: 100%;
+      max-width: 170px;
+      height: 100%;
+      max-height: 360px;
       right: 0px;
+      object-fit: contain;
+      background: white;
    }
 } ;
