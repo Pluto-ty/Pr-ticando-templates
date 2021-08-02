@@ -101,7 +101,7 @@ function operation(operationCliqued) {
             total = parseInt(value1) + parseInt(value2);
          }
 
-         if (String(total.toFixed(3)).length > 8) {
+         if (String(total.toFixed(2)).length > 8) {
             document.getElementById("js-input").value = "Err";
             nextValue = true;
             value1 = "";
@@ -109,7 +109,7 @@ function operation(operationCliqued) {
             Actualoperation = "";
             return;
          } else {
-            document.getElementById("js-input").value = total.toFixed(3);
+            document.getElementById("js-input").value = total.toFixed(2);
             value1 = total;
             value2 = "";
             Actualoperation = "";
@@ -136,14 +136,14 @@ function result() {
          total = parseInt(value1) + parseInt(value2);
       }
       console.log(total);
-      if (String(total.toFixed(3)).length > 8) {
+      if (String(total.toFixed(2)).length > 8) {
          document.getElementById("js-input").value = "Err";
          nextValue = true;
          value1 = "";
          value2 = "";
          Actualoperation = "";
       } else {
-         document.getElementById("js-input").value = total.toFixed(3);
+         document.getElementById("js-input").value = total.toFixed(2);
          value1 = total;
          value2 = "";
          Actualoperation = "";

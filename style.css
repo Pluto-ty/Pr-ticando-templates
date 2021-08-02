@@ -158,7 +158,7 @@ main {
    width: 90px;
    height: 180px;
    right: 0px;
-   box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.39);
+   /* box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.39); */
 }
 
 .c-content {
@@ -261,6 +261,6 @@ footer a + a {
       max-height: 360px;
       right: 0px;
       object-fit: contain;
-      background: white;
+      /* background: white; */
    }
 } ;

@@ -69,9 +69,9 @@ function calcs() {
       console.log(tipAmount, personAmount, value / people);
       document.getElementById(
          "js-tip-amount"
-      ).innerHTML = `$${tipAmount.toFixed(3)}`;
+      ).innerHTML = `$${tipAmount.toFixed(2)}`;
       document.getElementById("js-total").innerHTML = `$${personAmount.toFixed(
-         3
+         2
       )}`;
    } else {
       document.getElementById("js-button").classList.remove("on");
