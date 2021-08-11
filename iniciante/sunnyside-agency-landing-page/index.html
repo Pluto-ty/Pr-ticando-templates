@@ -23,51 +23,91 @@
    <body>
       <div class="c-container">
          <header>
-            <div>
-               <img src="./" alt="" />
-               <ul>
-                  <li><a href=""> About</a></li>
-                  <li><a href="">Services</a></li>
-                  <li>Projects<a href=""></a></li>
-                  <li><a href="">Contact</a></li>
-               </ul>
+            <div class="c-header-content">
+               <img class="c-logo" src="./images/logo.svg" alt="" />
+               <div class="c-nav-container">
+                  <span id="js-nav-mobile" class="c-menu-mobile"></span>
+
+                  <ul class="c-nav">
+                     <div class="c-nav-triangle"></div>
+                     <li><a href=""> About</a></li>
+                     <li><a href="">Services</a></li>
+                     <li><a href="">Projects</a></li>
+                     <li><a class="c-contact" href="">CONTACT</a></li>
+                  </ul>
+               </div>
             </div>
-            <h1>We are creatives</h1>
+
+            <h1 class="c-title">We are creatives</h1>
+            <img class="c-arrow" src="./images/icon-arrow-down.svg" alt="" />
          </header>
 
          <main>
-            <div class="c-content-grid">
-               <div>
-                  <h3>Transform your brand</h3>
-                  <p>
-                     We are a full-service creative agency specializing in
-                     helping brands grow fast. Engage your clients through
-                     compelling visuals that do most of the marketing for you.
-                  </p>
-                  <a href=""> Learn more</a>
-                  <img src="" alt="" />
+            <div class="c-content-container-grid">
+               <div class="c-content-grid egg-grid">
+                  <img
+                     class="c-img-mobile"
+                     src="./images/mobile/image-transform.jpg"
+                     alt=""
+                  />
+                  <img
+                     class="c-img-desktop"
+                     src="./images/desktop/image-transform.jpg"
+                     alt=""
+                  />
+                  <div class="c-text-container">
+                     <h2>Transform your brand</h2>
+                     <p>
+                        We are a full-service creative agency specializing in
+                        helping brands grow fast. Engage your clients through
+                        compelling visuals that do most of the marketing for
+                        you.
+                     </p>
+                     <a class="">
+                        Learn more
+                        <div class="link-yellow"></div>
+                     </a>
+                  </div>
                </div>
-               <div>
-                  <img src="" alt="" />
-                  <h3>Stand out to the right audience</h3>
-                  <p>
-                     Using a collaborative formula of designers, researchers,
-                     photographers, videographers, and copywriters, we’ll build
-                     and extend your brand in digital places.
-                  </p>
-                  <a href=""> Learn more </a>
+               <div class="c-content-grid">
+                  <img
+                     class="c-img-mobile"
+                     src="./images/mobile/image-stand-out.jpg"
+                     alt=""
+                  />
+                  <img
+                     class="c-img-desktop"
+                     src="./images/desktop/image-stand-out.jpg"
+                     alt=""
+                  />
+                  <div class="c-text-container">
+                     <h2>Stand out to the right audience</h2>
+                     <p>
+                        Using a collaborative formula of designers, researchers,
+                        photographers, videographers, and copywriters, we’ll
+                        build and extend your brand in digital places.
+                     </p>
+                     <a class="">
+                        Learn more
+                        <div class="link-red"></div>
+                     </a>
+                  </div>
                </div>
-               <div>
-                  <div>
-                     <h3>Graphic design</h3>
+            </div>
+            <div class="c-content-grid dual">
+               <div class="c-grafic-content">
+                  <div class="c-text-container">
+                     <h2>Graphic design</h2>
                      <p>
                         Great design makes you memorable. We deliver artwork
                         that underscores your brand message and captures
                         potential clients’ attention.
                      </p>
                   </div>
-                  <div>
-                     <h3>Photography</h3>
+               </div>
+               <div class="c-photography-grid">
+                  <div class="c-text-container">
+                     <h2>Photography</h2>
                      <p>
                         Increase your credibility by getting the most stunning,
                         high-quality photos that improve your business image.
@@ -76,39 +116,87 @@
                </div>
             </div>
             <div class="c-client-testimonials">
-               <h3>Client testimonials</h3>
-               <div>
-                  <img src="" alt="" />
-                  <p>
-                     We put our trust in Sunnyside and they delivered, making
-                     sure our needs were met and deadlines were always hit.
-                  </p>
-                  <p>Emily R.</p>
-                  <p>Marketing Director</p>
+               <h2>Client testimonials</h2>
+               <div class="client-grid">
+                  <div>
+                     <img src="./images/image-emily.jpg" alt="" />
+                     <p class="c-comment">
+                        We put our trust in Sunnyside and they delivered, making
+                        sure our needs were met and deadlines were always hit.
+                     </p>
+                     <div>
+                        <p class="c-name">Emily R.</p>
+                        <p>Marketing Director</p>
+                     </div>
+                  </div>
+                  <div>
+                     <img src="./images/image-thomas.jpg" alt="" />
+                     <p class="c-comment">
+                        Sunnyside’s enthusiasm coupled with their keen interest
+                        in our brand’s success made it a satisfying and
+                        enjoyable experience.
+                     </p>
+                     <div>
+                        <p class="c-name">Thomas S.</p>
+                        <p>Chief Operating Officer</p>
+                     </div>
+                  </div>
+                  <div>
+                     <img src="./images/image-jennie.jpg" alt="" />
+                     <p class="c-comment">
+                        Incredible end result! Our sales increased over 400%
+                        when we worked with Sunnyside. Highly recommended!
+                     </p>
+                     <div>
+                        <p class="c-name">Jennie F.</p>
+                        <p>Business Owner</p>
+                     </div>
+                  </div>
                </div>
-               <div>
-                  <img src="" alt="" />
-                  <p>
-                     Sunnyside’s enthusiasm coupled with their keen interest in
-                     our brand’s success made it a satisfying and enjoyable
-                     experience.
-                  </p>
-                  <p>Thomas S.</p>
-                  <p>Chief Operating Officer</p>
-               </div>
-               <div>
-                  <img src="" alt="" />
-                  <p>
-                     Incredible end result! Our sales increased over 400% when
-                     we worked with Sunnyside. Highly recommended!
-                  </p>
-                  <p>Jennie F.</p>
-                  <p>Business Owner</p>
-               </div>
+            </div>
+
+            <div class="c-img-mobile">
+               <img
+                  src="./images/mobile/image-gallery-milkbottles.jpg"
+                  alt=""
+               />
+               <img src="./images/mobile/image-gallery-orange.jpg" alt="" />
+               <img src="./images/mobile/image-gallery-cone.jpg" alt="" />
+               <img
+                  src="./images/mobile/image-gallery-sugar-cubes.jpg"
+                  alt=""
+               />
+            </div>
+            <div class="c-img-desktop">
+               <img
+                  src="./images/mobile/image-gallery-milkbottles.jpg"
+                  alt=""
+               />
+               <img src="./images/mobile/image-gallery-orange.jpg" alt="" />
+               <img src="./images/mobile/image-gallery-cone.jpg" alt="" />
+               <img
+                  src="./images/mobile/image-gallery-sugar-cubes.jpg"
+                  alt=""
+               />
             </div>
          </main>
 
-         <footer>About Services Projects Contact</footer>
+         <footer>
+            <img class="c-logo-footer" src="./images/logo.svg" />
+
+            <ul>
+               <li><a href="">About</a></li>
+               <li><a href="">Services</a></li>
+               <li><a href="">Projects </a></li>
+            </ul>
+            <div>
+               <img src="./images/icon-facebook.svg" alt="" />
+               <img src="./images/icon-instagram.svg" alt="" />
+               <img src="./images/icon-twitter.svg" alt="" />
+               <img src="./images/icon-pinterest.svg" alt="" />
+            </div>
+         </footer>
       </div>
+      <script src="./script.js"></script>
    </body>
 </html>
