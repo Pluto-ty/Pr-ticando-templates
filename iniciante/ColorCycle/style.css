@@ -1,0 +1,42 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   width: 100vw;
+   height: 100vh;
+   background: rgba(70, 28, 105, 0.575);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.c-container {
+   width: 600px;
+   height: 200px;
+   background: rgb(184, 175, 175);
+}
+
+input:focus {
+   outline: 0;
+}
+
+.btn {
+   display: block;
+   margin: 0 auto;
+   width: 70px;
+   height: 50px;
+   border: none;
+   color: white;
+   margin-top: 20px;
+   cursor: pointer;
+}
+
+.btn-start {
+   background: rgba(38, 57, 165, 0.829);
+}
+.btn-stop {
+   background: rgba(165, 38, 91, 0.829);
+}
