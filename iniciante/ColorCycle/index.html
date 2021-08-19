@@ -13,14 +13,30 @@
          <p>Preencha os campos com valores RGB</p>
          <div>
             <p>#</p>
-            <input type="text" minlength="0" maxlength="2" placeholder="RED" />
             <input
-               type="text"
-               minlength="0"
-               maxlength="2"
+               id="js-red"
+               type="number"
+               placeholder="RED"
+               min="0"
+               max="99"
+               onkeyup="enforceMinMax(this)"
+            />
+            <input
+               onkeyup="enforceMinMax(this)"
+               id="js-green"
+               type="number"
+               min="0"
+               max="99"
                placeholder="GREEN"
             />
-            <input type="text" minlength="0" maxlength="2" placeholder="BLUE" />
+            <input
+               onkeyup="enforceMinMax(this)"
+               id="js-blue"
+               type="number"
+               min="0"
+               max="99"
+               placeholder="BLUE"
+            />
          </div>
          <button class="btn btn-start" onclick="colorCycle()">Start</button>
       </div>

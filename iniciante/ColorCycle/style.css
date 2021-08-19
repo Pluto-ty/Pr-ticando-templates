@@ -16,7 +16,7 @@ body {
 .c-container {
    width: 600px;
    height: 200px;
-   background: rgb(184, 175, 175);
+   background: #126489;
 }
 
 input:focus {
