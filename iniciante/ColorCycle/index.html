@@ -5,41 +5,60 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="stylesheet" href="./style.css" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+         rel="stylesheet"
+      />
       <title>Document</title>
    </head>
    <body>
-      <div class="c-container">
+      <main class="c-container">
          <h1>ColorCycle</h1>
-         <p>Preencha os campos com valores RGB</p>
-         <div>
+         <p>Preencha os campos com valores RGB Hex.</p>
+         <div class="c-colors-container">
             <p>#</p>
+            <input id="js-red" type="text" placeholder="RED" maxlength="2" />
             <input
-               id="js-red"
-               type="number"
-               placeholder="RED"
-               min="0"
-               max="99"
-               onkeyup="enforceMinMax(this)"
-            />
-            <input
-               onkeyup="enforceMinMax(this)"
                id="js-green"
-               type="number"
-               min="0"
-               max="99"
+               type="text"
                placeholder="GREEN"
+               maxlength="2"
             />
-            <input
-               onkeyup="enforceMinMax(this)"
-               id="js-blue"
-               type="number"
-               min="0"
-               max="99"
-               placeholder="BLUE"
-            />
+            <input id="js-blue" type="text" placeholder="BLUE" maxlength="2" />
          </div>
+         <p class="c-erro-message">
+            Valor incorreto. RGB são compostos de 0 a 9 e de A a F. Cada caixa
+            deve ter 2 dígitos.
+         </p>
+         <p>
+            Valores nos dois campos abaixo não são obrigatórios, para voltar aos
+            valores padrões apenas coloque 0 ou deixe vazio.
+         </p>
+         <input
+            id="js-valueperTime"
+            type="number"
+            class="c-time-and-value"
+            placeholder="Valor de acréscimo"
+            min="0"
+            max="255"
+            onkeyup="enforceMinMax(this)"
+         />
+         <input
+            id="js-timeperChange"
+            class="c-time-and-value"
+            type="number"
+            placeholder="Time per Color(Segundos)"
+            min="0"
+            max="255"
+            onkeyup="enforceMinMax(this)"
+         />
+         <h3 class="c-result" id="js-resultColor">
+            Cor do Background em RBG padrão: rbg( 0, 0, 0)
+         </h3>
          <button class="btn btn-start" onclick="colorCycle()">Start</button>
-      </div>
+      </main>
       <script src="./script.js"></script>
    </body>
 </html>

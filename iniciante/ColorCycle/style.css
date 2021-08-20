@@ -2,6 +2,7 @@
    margin: 0;
    padding: 0;
    box-sizing: border-box;
+   font-family: "Roboto", sans-serif;
 }
 
 body {
@@ -11,17 +12,73 @@ body {
    display: flex;
    justify-content: center;
    align-items: center;
-}
-
-.c-container {
-   width: 600px;
-   height: 200px;
-   background: #126489;
+   transition: 0.5s ease-in-out;
 }
 
 input:focus {
    outline: 0;
 }
+p {
+   text-align: center;
+}
+
+.c-container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   gap: 10px;
+   width: 600px;
+   background: #126489;
+   border-radius: 2em;
+   padding: 5px;
+}
+
+h1 {
+   color: White;
+}
+
+/* Colors */
+
+.c-colors-container {
+   display: flex;
+   gap: 10px;
+}
+
+.c-colors-container input {
+   width: 50px;
+   border: 0;
+   border-radius: 2em;
+   text-align: center;
+}
+
+.c-colors-container input::placeholder,
+.c-time::placeholder {
+   text-align: center;
+}
+
+.c-erro-message {
+   color: rgba(255, 255, 255, 0.918);
+   background: rgb(163, 70, 77);
+   padding: 5px;
+   border-radius: 2em;
+   display: none;
+   width: 60%;
+   padding: 10px 15px;
+}
+
+.c-time-and-value {
+   width: 180px;
+   border-radius: 2em;
+   border: 0;
+   text-align: center;
+}
+
+.c-result {
+   transition: 0.5s ease-in-out;
+}
+
+/* BTN */
 
 .btn {
    display: block;
