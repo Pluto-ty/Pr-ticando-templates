@@ -1,0 +1,69 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   text-align: center;
+}
+
+body {
+   background: #c4c4c4;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 100vh;
+}
+
+input,
+button {
+   outline: 0;
+   border: 0;
+   cursor: pointer;
+}
+
+main {
+   background: #405d6d;
+   max-height: 500px;
+   padding: 60px 30px;
+}
+
+h1 {
+   font-size: 40px;
+   margin-bottom: 10px;
+}
+
+p {
+   font-size: 20px;
+}
+
+h3 {
+   margin-top: 10px;
+   font-size: 30px;
+}
+
+h2 {
+   background: white;
+   width: 70%;
+   margin: 10px auto 30px auto;
+   padding: 20px;
+}
+
+.c-inputs {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 20px;
+}
+input {
+   height: 20px;
+}
+
+.c-inputs input:last-child {
+   grid-column-start: 1;
+   grid-column-end: 3;
+   margin: 0 auto;
+}
+
+button {
+   margin-top: 20px;
+   width: 150px;
+   height: 40px;
+}
