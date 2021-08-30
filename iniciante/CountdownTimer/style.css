@@ -62,8 +62,14 @@ input {
    margin: 0 auto;
 }
 
-button {
+.c-start {
    margin-top: 20px;
    width: 150px;
    height: 40px;
+}
+
+.c-save {
+   margin-left: 20px;
+   height: 40px;
+   padding: 5px;
 }
