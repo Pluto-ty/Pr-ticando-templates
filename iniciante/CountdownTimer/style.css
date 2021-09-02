@@ -3,6 +3,7 @@
    padding: 0;
    box-sizing: border-box;
    text-align: center;
+   font-family: "Roboto", sans-serif;
 }
 
 body {
@@ -26,6 +27,8 @@ main {
    padding: 60px 30px;
 }
 
+/* CONTENT */
+
 h1 {
    font-size: 40px;
    margin-bottom: 10px;
@@ -47,6 +50,7 @@ h2 {
    padding: 20px;
 }
 
+/* INPUTS */
 .c-inputs {
    display: grid;
    grid-template-columns: 1fr 1fr;
@@ -62,6 +66,8 @@ input {
    margin: 0 auto;
 }
 
+/* BUTTONS */
+
 .c-start {
    margin-top: 20px;
    width: 150px;
@@ -72,4 +78,70 @@ input {
    margin-left: 20px;
    height: 40px;
    padding: 5px;
+}
+
+/* MODAL */
+.c-modal-container {
+   position: absolute;
+   height: 100%;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background: rgba(0, 0, 0, 0.253);
+}
+.c-modal {
+   max-width: 300px;
+   background: rgb(255, 255, 255);
+   /* top: 0; */
+   border-radius: 2em;
+   padding: 20px;
+   min-height: 228px;
+}
+
+.c-modal h1 {
+   font-size: 20px;
+}
+
+.c-modal p {
+   text-align: justify;
+   font-size: 15px;
+   margin: 10px 0;
+}
+
+.c-modal button {
+   background: rgb(82, 50, 156);
+   padding: 10px;
+   border-radius: 0.5em;
+   color: white;
+}
+
+/* SAVED EVENTS */
+
+.c-saved-events {
+   position: absolute;
+   top: 0;
+   left: 0;
+   padding: 20px;
+}
+
+.c-event {
+   background: #405d6d;
+   padding: 20px;
+}
+
+.c-event h1 {
+   font-size: 18px;
+}
+
+.c-event p {
+   font-size: 15px;
+}
+
+.c-event button {
+   background: rgb(204, 54, 54);
+   color: white;
+   padding: 5px;
+   margin-top: 10px;
+   border-radius: 0.25em;
 }

@@ -4,10 +4,17 @@
       <meta charset="UTF-8" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+         rel="stylesheet"
+      />
       <link rel="stylesheet" href="./style.css" />
       <title>Document</title>
    </head>
    <body>
+      <div id="js-saved-events" class="c-saved-events"></div>
       <main>
          <h1>Countdown Timer</h1>
          <p>Coloque abaixo nome do evento, data e hora(opcional)</p>
@@ -21,6 +28,7 @@
          <button class="c-start" id="js-button-start">Start</button>
          <button id="js-save" class="c-save">Salver Evento</button>
       </main>
+      <div id="js-modal"></div>
       <script src="./script.js"></script>
    </body>
 </html>
