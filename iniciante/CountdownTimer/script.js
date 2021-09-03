@@ -1,6 +1,8 @@
 let timeInterval;
 let timeIntervalCheck = false;
 let snd = new Audio("./alarm.wav");
+let timerIntervalCheck = false;
+let timerInterval;
 const countDownTimer = {
    futureDateArray: [],
 
@@ -300,11 +302,52 @@ const timer = {
          } else {
             document.getElementById("js-timer-button").innerHTML = "Start";
          }
+         let value = timer.getTime();
+         let hours = Number(value[0]);
+         let min = Number(value[1]);
+         let sec = 0;
+         document.getElementById(
+            "js-timeText"
+         ).innerHTML = `${hours}h ${min}m ${sec}s`;
+         timerInterval = setInterval(() => {
+            if (hours <= 0 && min <= 0 && sec <= 0) {
+               timer.stopTimer();
+               return;
+            }
+            if (sec <= 0) {
+               min = min - 1;
+               sec = 60;
+            }
+            if (min <= 0) {
+               hours = hours - 1;
+               min = 60;
+            }
+
+            sec = sec - 1;
+            document.getElementById(
+               "js-timeText"
+            ).innerHTML = `${hours}h ${min}m ${sec}s`;
+            // console.log(sec);
+         }, 1000);
+         return;
+      } else {
+         alert("Selecione um tempo");
+         return;
       }
    },
+   stopTimer: () => {
+      alert("Acabou");
+      clearInterval(timerInterval);
+   },
    verify: () => {
-      let value = document.getElementById("js-timerInput").value;
-      console.log(value);
-      return true;
+      let value = timer.getTime();
+      if (value != "" && value[0] <= 0 && value[1] <= 0) {
+         console.log(value);
+         return true;
+      }
+      return false;
+   },
+   getTime: () => {
+      return document.getElementById("js-timerInput").value.split(":");
    },
 };
