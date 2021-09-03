@@ -30,7 +30,7 @@ const countDownTimer = {
          return true;
       } else {
          console.log(FutureDate);
-         console.log("Errado");
+         console.log("Data inválida");
          return false;
       }
    },
@@ -48,8 +48,8 @@ const countDownTimer = {
          ).innerHTML = `${timeLeft.months}m ${timeLeft.days}d ${timeLeft.hours}h ${timeLeft.minutes}m ${timeLeft.seconds}s`;
       }
 
-      if (timeIntervalCheck == false) {
-         if (i == "normal") {
+      if (i == "normal") {
+         if (timeIntervalCheck == false) {
             timeInterval = setInterval(() => {
                countDownTimer.startCountDown(i);
             }, 1000);
@@ -57,31 +57,30 @@ const countDownTimer = {
                input.readOnly = true;
             });
             timeIntervalCheck = true;
-         } else {
+         }
+      } else {
+         if (countDownTimer.futureDateArray[i].interval == false) {
             if (i == 1) {
                timeInterval1 = setInterval(() => {
                   countDownTimer.startCountDown(i);
                }, 1000);
-               return;
             }
             if (i == 2) {
                timeInterval2 = setInterval(() => {
                   countDownTimer.startCountDown(i);
                }, 1000);
-               return;
             }
             if (i == 3) {
                timeInterval3 = setInterval(() => {
                   countDownTimer.startCountDown(i);
                }, 1000);
-               return;
             }
             if (i == 0) {
                timeInterval0 = setInterval(() => {
                   countDownTimer.startCountDown(i);
                }, 1000);
-               return;
             }
+            countDownTimer.futureDateArray[i].interval = true;
          }
       }
    },
@@ -90,21 +89,18 @@ const countDownTimer = {
          clearInterval(timeInterval);
       } else {
          if (i == 1) {
-            clearInterval(timeIntervalEvent1);
-            return;
+            clearInterval(timeInterval1);
          }
          if (i == 2) {
-            clearInterval(timeIntervalEvent2);
-            return;
+            clearInterval(timeInterval2);
          }
          if (i == 3) {
-            clearInterval(timeIntervalEvent3);
-            return;
+            clearInterval(timeInterval3);
          }
          if (i == 0) {
-            clearInterval(timeIntervalEvent0);
-            return;
+            clearInterval(timeInterval0);
          }
+         countDownTimer.futureDateArray[i].interval = false;
       }
       timeIntervalCheck = false;
       document.querySelectorAll("input").forEach((input) => {
@@ -129,7 +125,7 @@ const countDownTimer = {
          }
          return FutureDate;
       } else {
-         let FutureDate = countDownTimer.futureDateArray[i].data;
+         let FutureDate = new Date(countDownTimer.futureDateArray[i].data);
          return FutureDate;
       }
    },
@@ -187,31 +183,65 @@ const countDownTimer = {
       document.querySelector("#js-modal").innerHTML = "";
    },
    saveEvent: (i) => {
+      if (countDownTimer.futureDateArray.length > 3) {
+         alert("Somente 4 eventos podem ser salvos");
+         return;
+      }
       let nome = document.getElementById("js-name").value;
       let FutureDate = countDownTimer.futureDateCalc(i);
 
       let event = {
          name: nome,
          data: FutureDate,
+         interval: false,
       };
       countDownTimer.futureDateArray.push(event);
+
+      localStorage.setItem(
+         "js-array",
+         JSON.stringify(countDownTimer.futureDateArray)
+      );
    },
    renderEvents: () => {
       document.querySelector("#js-saved-events").innerHTML = "";
       let events = countDownTimer.futureDateArray;
+
       events.forEach((i, index) => {
          document.querySelector("#js-saved-events").innerHTML += `
          <div class="c-event">
             <h1>${i.name}</h1>
             <p id="js-event${index}">00m 00d 00h 00m 00s</p>
-            <button onclick"deleteEvent(${index})">Deletar</button>
+            <button name"${index}" id="js-del${index}">Deletar</button>
          </div>
       `;
-         console.log(index);
          countDownTimer.startCountDown(index);
+      });
+
+      events.forEach((i, index) => {
+         document
+            .getElementById(`js-del${index}`)
+            .addEventListener("click", () => {
+               countDownTimer.deleteEvent(index);
+            });
       });
    },
    deleteEvent: (i) => {
+      console.log(countDownTimer.futureDateArray.length);
+      countDownTimer.futureDateArray.forEach((i, index) => {
+         countDownTimer.stopCountDown(index);
+      });
+      countDownTimer.futureDateArray.splice(i, 1);
+      localStorage.setItem(
+         "js-array",
+         JSON.stringify(countDownTimer.futureDateArray)
+      );
+      let newArray = [];
+      countDownTimer.futureDateArray.forEach((i, index) => {
+         newArray.push(i);
+         countDownTimer.stopCountDown(index);
+      });
+      countDownTimer.futureDateArray = newArray;
+      countDownTimer.renderEvents();
       // Deletar evento clicado, para deletar ele vai pegar o valor do index. Apagar os dados e o index no array e repetir a renderização, parecendo que apagou.
       // Colocar que quando o array for alterado ele vai acionar o stop de todos os intervalos para n ter conflito nos setinterval e depois disso ai renderizar todos novamente e começar os intervalos de novo.
    },
@@ -237,3 +267,44 @@ document.getElementById("js-save").addEventListener("click", () => {
       }
    }
 });
+
+window.onload = () => {
+   let array = JSON.parse(localStorage.getItem("js-array"));
+   if (array != null) {
+      array.forEach((i) => {
+         i.interval = false;
+      });
+      countDownTimer.futureDateArray = array;
+      countDownTimer.renderEvents();
+   } else {
+      return;
+   }
+};
+
+// Change
+
+document.getElementById("js-change").addEventListener("click", () => {
+   // Trocar countdown timer pelo timer
+   document.getElementById("js-countdownContainer").classList.toggle("on");
+   document.getElementById("js-timerContainer").classList.toggle("on");
+});
+
+// TIMER
+
+const timer = {
+   start: () => {
+      if (timer.verify()) {
+         let text = document.getElementById("js-timer-button").innerHTML;
+         if (text == "Start") {
+            document.getElementById("js-timer-button").innerHTML = "Stop";
+         } else {
+            document.getElementById("js-timer-button").innerHTML = "Start";
+         }
+      }
+   },
+   verify: () => {
+      let value = document.getElementById("js-timerInput").value;
+      console.log(value);
+      return true;
+   },
+};

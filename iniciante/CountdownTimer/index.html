@@ -16,17 +16,40 @@
    <body>
       <div id="js-saved-events" class="c-saved-events"></div>
       <main>
-         <h1>Countdown Timer</h1>
-         <p>Coloque abaixo nome do evento, data e hora(opcional)</p>
-         <h3 id="js-eventName">Nome</h3>
-         <h2 id="js-time-counter">00m 00d 00h 00m 00s</h2>
-         <div class="c-inputs">
-            <input id="js-name" type="text" placeholder="Name" />
-            <input id="js-date" type="date" placeholder="Date" />
-            <input id="js-time" type="time" placeholder="Hour" />
+         <div class="c-imgContainer">
+            <img
+               id="js-change"
+               class="c-changeImg"
+               alt=""
+               src="./refresh_106672.svg"
+            />
          </div>
-         <button class="c-start" id="js-button-start">Start</button>
-         <button id="js-save" class="c-save">Salver Evento</button>
+         <div id="js-countdownContainer" class="c-countdown on">
+            <h1>Countdown Timer</h1>
+            <p>Coloque abaixo nome do evento, data e hora(opcional)</p>
+            <h3 id="js-eventName">Nome</h3>
+            <h2 id="js-time-counter">00m 00d 00h 00m 00s</h2>
+            <div class="c-inputs">
+               <input id="js-name" type="text" placeholder="Name" />
+               <input id="js-date" type="date" placeholder="Date" />
+               <input id="js-time" type="time" placeholder="Hour" />
+            </div>
+            <button class="c-start" id="js-button-start">Start</button>
+            <button id="js-save" class="c-save">Salver Evento</button>
+         </div>
+         <div id="js-timerContainer" class="c-timer">
+            <h1>Timer</h1>
+            <p>Digite o tempo para o alarm</p>
+            <p class="c-time">00H 00M 00S</p>
+            <input id="js-timerInput" type="time" />
+            <button
+               id="js-timer-button"
+               onclick="timer.start()"
+               class="c-start"
+            >
+               Start
+            </button>
+         </div>
       </main>
       <div id="js-modal"></div>
       <script src="./script.js"></script>
