@@ -165,8 +165,16 @@ const countDownTimer = {
       if (i == "normal") {
          document.querySelector("#js-modal").innerHTML = `
          <div id="js-modal" class="c-modal">
-            <h1>ALARM!!! Nome do Evento</h1>
-           
+            <h1>ALARM!!! ${
+               document.getElementById("js-name").value
+            }</h1>         
+            <button onclick="countDownTimer.clearModal()">OKAY</button>
+         </div>
+         `;
+      } else if (i == "timer") {
+         document.querySelector("#js-modal").innerHTML = `
+         <div id="js-modal" class="c-modal">
+            <h1>ALARM!!! Timer Acabou</h1>         
             <button onclick="countDownTimer.clearModal()">OKAY</button>
          </div>
          `;
@@ -311,16 +319,17 @@ const timer = {
          ).innerHTML = `${hours}h ${min}m ${sec}s`;
          timerInterval = setInterval(() => {
             if (hours <= 0 && min <= 0 && sec <= 0) {
+               countDownTimer.createModal("timer");
                timer.stopTimer();
                return;
             }
             if (sec <= 0) {
+               if (min <= 0) {
+                  hours = hours - 1;
+                  min = 60;
+               }
                min = min - 1;
                sec = 60;
-            }
-            if (min <= 0) {
-               hours = hours - 1;
-               min = 60;
             }
 
             sec = sec - 1;
@@ -336,13 +345,12 @@ const timer = {
       }
    },
    stopTimer: () => {
-      alert("Acabou");
       clearInterval(timerInterval);
    },
    verify: () => {
       let value = timer.getTime();
-      if (value != "" && value[0] <= 0 && value[1] <= 0) {
-         console.log(value);
+      if (value != "") {
+         if (value[0] <= 0 && value[1] <= 0) return false;
          return true;
       }
       return false;
