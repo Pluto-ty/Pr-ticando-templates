@@ -1,8 +1,9 @@
 let timeInterval;
 let timeIntervalCheck = false;
 let snd = new Audio("./alarm.wav");
-let timerIntervalCheck = false;
+
 let timerInterval;
+document.getElementById("js-date").max = "2222-05-26";
 const countDownTimer = {
    futureDateArray: [],
 
@@ -19,7 +20,7 @@ const countDownTimer = {
             countDownTimer.stopCountDown(i);
          }
       } else {
-         alert("Digite o nome para o Evento");
+         alert("Verifique todos os dados inseridos");
       }
    },
    verify: (i) => {
@@ -55,7 +56,7 @@ const countDownTimer = {
             timeInterval = setInterval(() => {
                countDownTimer.startCountDown(i);
             }, 1000);
-            document.querySelectorAll("input").forEach((input) => {
+            document.querySelectorAll(".c-countDown-input").forEach((input) => {
                input.readOnly = true;
             });
             timeIntervalCheck = true;
@@ -144,7 +145,7 @@ const countDownTimer = {
       }
 
       let months = Math.floor(totalSeconds / 3600 / 24 / 30);
-      let days = Math.floor(totalSeconds / 3600 / 24);
+      let days = Math.floor((totalSeconds / 3600 / 24) % 30);
       let hours = Math.floor(totalSeconds / 3600) % 24;
       let minutes = Math.floor(totalSeconds / 60) % 60;
       let seconds = Math.floor(totalSeconds % 60);
@@ -302,18 +303,24 @@ document.getElementById("js-change").addEventListener("click", () => {
 // TIMER
 
 const timer = {
+   timerArray: [],
    start: () => {
       if (timer.verify()) {
          let text = document.getElementById("js-timer-button").innerHTML;
          if (text == "Start") {
             document.getElementById("js-timer-button").innerHTML = "Stop";
          } else {
+            timer.stopTimer();
             document.getElementById("js-timer-button").innerHTML = "Start";
+            return;
          }
-         let value = timer.getTime();
-         let hours = Number(value[0]);
-         let min = Number(value[1]);
+         let hours, min, value;
          let sec = 0;
+
+         value = timer.getTime();
+         hours = Number(value[0]);
+         min = Number(value[1]);
+
          document.getElementById(
             "js-timeText"
          ).innerHTML = `${hours}h ${min}m ${sec}s`;
@@ -338,7 +345,6 @@ const timer = {
             ).innerHTML = `${hours}h ${min}m ${sec}s`;
             // console.log(sec);
          }, 1000);
-         return;
       } else {
          alert("Selecione um tempo");
          return;
