@@ -32,6 +32,7 @@ body {
    display: grid;
    grid: "main" 1fr;
    overflow-x: hidden;
+   width: 100vw;
 }
 
 /* Utilitários */
@@ -62,7 +63,6 @@ body {
 main {
    margin: 100px auto 0 auto;
    display: grid;
-   /* max-width: 340px; */
    align-items: start;
    gap: 20px;
    grid:
@@ -96,6 +96,10 @@ main h1 {
 
 /* Carrosel */
 
+.c-arrow {
+   width: 80px;
+}
+
 section .box-1 {
    display: none;
 }
@@ -112,6 +116,7 @@ section .box-2.on {
 }
 
 section {
+   gap: 20px;
    display: flex;
    justify-content: center;
    align-items: center;
