@@ -1,36 +1,47 @@
+let category = 0;
+
 const Show = {
    showP() {
-      let principalProjects = document.querySelector("#js-principal-projects");
+      category = 0;
+      let principalProjects = document.querySelector("#items");
       if (principalProjects.classList.contains("on") != true) {
-         document.querySelector("#js-principal-projects").classList.add("on");
-         document.querySelector("#js-newbie-projects").classList.remove("on");
+         document.querySelector("#items").classList.add("on");
+         document.querySelector("#items2").classList.remove("on");
+         return;
+      } else {
+         return;
       }
    },
    ShowI() {
-      let newbieProjects = document.querySelector("#js-newbie-projects");
+      category = 1;
+      let newbieProjects = document.querySelector("#items2");
       if (newbieProjects.classList.contains("on") != true) {
-         document
-            .querySelector("#js-principal-projects")
-            .classList.remove("on");
-         document.querySelector("#js-newbie-projects").classList.add("on");
+         document.querySelector("#items").classList.remove("on");
+         document.querySelector("#items2").classList.add("on");
       }
    },
 };
 
-document.querySelector("#items").addEventListener("wheel", (event) => {
-   // alert("test");
-   if (event.deltaY > 0) {
-      document.querySelector("#items").scrollBy(800, 0);
-   } else {
-      document.querySelector("#items").scrollBy(-800, 0);
-   }
-});
-
-document.querySelector("#items2").addEventListener("wheel", (event) => {
-   // alert("test");
-   if (event.deltaY > 0) {
-      document.querySelector("#items2").scrollBy(800, 0);
-   } else {
-      document.querySelector("#items2").scrollBy(-800, 0);
-   }
-});
+const arrow = {
+   leftArrow: () => {
+      if (category == 0) {
+         document.querySelector("#items").scrollBy(-1000, 0);
+         return;
+      }
+      if (category == 1) {
+         document.querySelector("#items2").scrollBy(-800, 0);
+         return;
+      }
+   },
+   rightArrow: () => {
+      console.log("test");
+      if (category == 0) {
+         document.querySelector("#items").scrollBy(1000, 0);
+         return;
+      }
+      if (category == 1) {
+         document.querySelector("#items2").scrollBy(1000, 0);
+         return;
+      }
+   },
+};

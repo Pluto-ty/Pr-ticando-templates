@@ -4,6 +4,12 @@
       <meta charset="UTF-8" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Montserrat:wght@400;700&display=swap"
+         rel="stylesheet"
+      />
       <link rel="stylesheet" href="./style.css" />
       <title>Galeria de Templates</title>
    </head>
@@ -11,643 +17,614 @@
    <body>
       <div class="c-container">
          <main>
-            <div class="c-nav">
+            <h1>PROJETOS</h1>
+            <nav class="c-nav">
                <a onclick="Show.showP()">Principais</a>
                <a onclick="Show.ShowI()">Outros</a>
-            </div>
+            </nav>
+            <section>
+               <img
+                  onclick="arrow.leftArrow()"
+                  src="./assets/arrow-left.png"
+                  alt=""
+               />
 
-            <div class="c-projects c-principais on" id="js-principal-projects">
-               <div class="c-box" id="items2">
-                  <div class="c-project">
-                     <div class="c-images">
-                        <img
-                           class="c-desktop-img"
-                           src="./assets/devfinance/web.png"
-                           alt=""
-                        />
-                        <img
-                           class="c-mobile-img"
-                           src="./assets/devfinance/demonstration-mobile.gif"
-                           alt=""
-                        />
+               <div id="items" class="c-carrosel-box box-1 on">
+                  <!-- Dev Finance -->
+                  <div class="u-project">
+                     <img
+                        class="image"
+                        src="./assets/projects/devfinance.png"
+                        alt=""
+                     />
+                     <div class="u-project-content bg-1">
+                        <div>
+                           <h3>Dev$finance</h3>
+                           <p>
+                              Dev$finance é um projeto feito durante uma
+                              maratona da Rocketseat, utilizando Html, Css e
+                              Javascript e sua função é ajudar na organização de
+                              gastos mensais, tudo utilizando LocalStorage para
+                              não perder os dados.
+                           </p>
+                        </div>
+                        <div class="u-buttons">
+                           <a
+                              target="_blank"
+                              href="https://thyagoaraujom.github.io/Dev-finance/"
+                              class="u-btn-site"
+                              >Site</a
+                           >
+                           <a
+                              target="_blank"
+                              href="https://github.com/ThyagoAraujoM/Dev-finance"
+                              class="u-btn-git"
+                              >GitHub</a
+                           >
+                        </div>
                      </div>
-                     <div class="c-content">
-                        <p>Aplicação de controle financeiro</p>
-                        <ul class="u-button-container">
-                           <li class="u-button">
-                              <a
-                                 target="_blank"
-                                 href="https://thyagoaraujom.github.io/Maratona-Discover/"
-                                 >Site</a
-                              >
-                           </li>
-                           <li class="u-button">
-                              <a
-                                 target="_blank"
-                                 href="https://github.com/ThyagoAraujoM/Maratona-Discover"
-                                 >Repo</a
-                              >
-                           </li>
-                        </ul>
+                  </div>
+                  <!-- Fancy Border Radius -->
+                  <div class="u-project">
+                     <img
+                        class="image"
+                        src="./assets/projects/fancy-border-radius.png"
+                        alt=""
+                     />
+                     <div class="u-project-content bg-2">
+                        <div>
+                           <h3>Fancy Border Radius</h3>
+                           <p>
+                              Fancy Border radius é um projeto baseado em um dos
+                              desafios do repositório App Ideas no github. Nele
+                              temos que criar uma interface que o usuário possa
+                              modificar o border-radius do elemento a vontade e
+                              conseguir copia-lo pronto para usar no seu
+                              projeto.
+                           </p>
+                        </div>
+                        <div class="u-buttons">
+                           <a
+                              target="_blank"
+                              href="https://thyagoaraujom.github.io/Praticando-templates/iniciante/Border-radius-Previewer"
+                              class="u-btn-site"
+                              >Site</a
+                           >
+                           <a
+                              target="_blank"
+                              href="https://github.com/ThyagoAraujoM/Praticando-templates/tree/main/iniciante/Border-radius-Previewer"
+                              class="u-btn-git"
+                              >GitHub</a
+                           >
+                        </div>
+                     </div>
+                  </div>
+                  <!-- FAQ -->
+                  <div class="u-project">
+                     <img
+                        class="image"
+                        src="./assets/projects/faq.png"
+                        alt=""
+                     />
+                     <div class="u-project-content bg-1">
+                        <div>
+                           <h3>FAQ Template</h3>
+                           <p>
+                              Este projeto é um template básico de um FAQ
+                              baseado do site FrontendMentor, dele temos que
+                              recriar o design o mais fielmente possível ao
+                              protótipo recebido e que esteja responsivo para
+                              maioria dos dispositivos.
+                           </p>
+                        </div>
+                        <div class="u-buttons">
+                           <a
+                              target="_blank"
+                              href="https://thyagoaraujom.github.io/Praticando-templates/iniciante/faq-accordion-card-main"
+                              class="u-btn-site"
+                              >Site</a
+                           >
+                           <a
+                              target="_blank"
+                              href="https://github.com/ThyagoAraujoM/Praticando-templates/tree/main/iniciante/faq-accordion-card-main"
+                              class="u-btn-git"
+                              >GitHub</a
+                           >
+                        </div>
                      </div>
                   </div>
 
-                  <div class="c-project">
-                     <div class="c-images">
-                        <img
-                           class="c-desktop-img"
-                           src="./assets/wildbeast/demonstration.gif"
-                           alt=""
-                        />
-                        <img
-                           class="c-mobile-img"
-                           src="./assets/wildbeast/demonstration-mobile.gif"
-                           alt=""
-                        />
+                  <!-- Splitter -->
+                  <div class="u-project">
+                     <img
+                        class="image"
+                        src="./assets/projects/spliter.png"
+                        alt=""
+                     />
+                     <div class="u-project-content bg-1">
+                        <div>
+                           <h3>Splitter</h3>
+                           <p>
+                              Slitter é um aplicativo para calculo de gorjeta,
+                              com o calculo em si, uma área para valores da
+                              gorjeta escolhida pelo usuário e um botão para
+                              zerar tudo, outro projeto baseado do site
+                              FrontendMentor.
+                           </p>
+                        </div>
+                        <div class="u-buttons">
+                           <a
+                              target="_blank"
+                              href="https://thyagoaraujom.github.io/Praticando-templates/iniciante/tip-calculator-app-main/index.html"
+                              class="u-btn-site"
+                              >Site</a
+                           >
+                           <a
+                              target="_blank"
+                              href="https://github.com/ThyagoAraujoM/Praticando-templates/tree/main/iniciante/tip-calculator-app-main"
+                              class="u-btn-git"
+                              >GitHub</a
+                           >
+                        </div>
                      </div>
-                     <div class="c-content">
-                        <p>Wildbeast</p>
-                        <ul class="u-button-container">
-                           <li class="u-button">
-                              <a
-                                 target="_blank"
-                                 href="https://thyagoaraujom.github.io/Wildbeast/"
-                                 >Site</a
-                              >
-                           </li>
-                           <li class="u-button">
-                              <a
-                                 target="_blank"
-                                 href="https://github.com/ThyagoAraujoM/Wildbeast"
-                                 >Repo</a
-                              >
-                           </li>
-                        </ul>
+                  </div>
+                  <!-- WildBeast -->
+                  <div class="u-project">
+                     <img
+                        class="image"
+                        src="./assets/projects/wildbeast.png"
+                        alt=""
+                     />
+                     <div class="u-project-content bg-2">
+                        <div>
+                           <h3>WildBeast</h3>
+                           <p>
+                              Wildbeast é um template feito para a prática de
+                              grid layout, utilizando todos os seus conceitos
+                              para criar um layout responsivo para todos os
+                              tipos de dispositivos.
+                           </p>
+                        </div>
+                        <div class="u-buttons">
+                           <a
+                              target="_blank"
+                              href="https://thyagoaraujom.github.io/Wildbeast/"
+                              class="u-btn-site"
+                              >Site</a
+                           >
+                           <a
+                              target="_blank"
+                              href="https://github.com/ThyagoAraujoM/Wildbeast"
+                              class="u-btn-git"
+                              >GitHub</a
+                           >
+                        </div>
+                     </div>
+                  </div>
+                  <!-- Flexblog -->
+                  <div class="u-project">
+                     <img
+                        class="image"
+                        src="./assets/projects/flexblog.jpg"
+                        alt=""
+                     />
+                     <div class="u-project-content bg-1">
+                        <div>
+                           <h3>FlexBox</h3>
+                           <p>
+                              Flexbox é um template feito para treinar flexbox
+                              como o próprio nome diz, feito com todos os seus
+                              princípios de flexibilidade para criar um layout
+                              responsivo para todos os tipos de dispositivos.
+                           </p>
+                        </div>
+                        <div class="u-buttons">
+                           <a
+                              target="_blank"
+                              href="https://thyagoaraujom.github.io/FlexBlog/"
+                              class="u-btn-site"
+                              >Site</a
+                           >
+                           <a
+                              target="_blank"
+                              href="https://github.com/ThyagoAraujoM/FlexBlog"
+                              class="u-btn-git"
+                              >GitHub</a
+                           >
+                        </div>
                      </div>
                   </div>
                </div>
-               <img class="c-arrow" src="./assets/seta.svg" alt="" />
-            </div>
-            <div class="c-projects c-iniciantes" id="js-newbie-projects">
-               <div class="c-box" id="items">
-                  <div class="c-project">
-                     <div class="c-images">
-                        <img
-                           class="c-desktop-img"
-                           src="./iniciante/Stats preview card component/images/readme/web.PNG"
-                           alt=""
-                        />
-                        <img
-                           class="c-mobile-img"
-                           src="./iniciante/Stats preview card component/images/readme/mobile.PNG"
-                           alt=""
-                        />
+
+               <div id="items2" class="c-carrosel-box box-2">
+                  <!-- Stats preview card component -->
+                  <div class="u-project">
+                     <img
+                        class="image"
+                        src="./iniciante/Stats preview card component/images/readme/web.PNG"
+                        alt=""
+                     />
+                     <div class="u-project-content bg-1">
+                        <div>
+                           <h3>Stats preview card component</h3>
+                           <p>Template básico para prática</p>
+                        </div>
+                        <div class="u-buttons">
+                           <a
+                              target="_blank"
+                              href="./iniciante/Stats preview card component"
+                              class="u-btn-site"
+                              >Site</a
+                           >
+                           <a
+                              target="_blank"
+                              href="https://github.com/Pluto-ty/Praticando-templates/tree/main/iniciante/Stats%20preview%20card%20component"
+                              class="u-btn-git"
+                              >GitHub</a
+                           >
+                        </div>
                      </div>
-                     <div class="c-content">
-                        <p>Stats preview card component</p>
-                        <ul class="u-button-container">
-                           <li class="u-button">
-                              <a
-                                 target="_blank"
-                                 href="./iniciante/Stats preview card component/index.html"
-                                 >Site</a
-                              >
-                           </li>
-                           <li class="u-button">
-                              <a
-                                 target="_blank"
-                                 href="https://github.com/Pluto-ty/Praticando-templates/tree/main/iniciante/Stats%20preview%20card%20component"
-                                 >Repo</a
-                              >
-                           </li>
-                        </ul>
+                  </div>
+                  <!-- 3 column preview card -->
+                  <div class="u-project">
+                     <img
+                        class="image"
+                        src="./iniciante/3-column-preview-card/images/readme/web.png"
+                        alt=""
+                     />
+                     <div class="u-project-content bg-2">
+                        <div>
+                           <h3>3 column preview card</h3>
+                           <p>
+                              Flexbox é um template feito para trinar flexbox
+                              como o próprio nome diz, feito com todos os seus
+                              princípios de flexibilidade para criar um layout
+                              responsivo para todos os tipos de dispositivos.
+                           </p>
+                        </div>
+                        <div class="u-buttons">
+                           <a
+                              target="_blank"
+                              href="./iniciante/3-column-preview-card/"
+                              class="u-btn-site"
+                              >Site</a
+                           >
+                           <a
+                              target="_blank"
+                              href="https://github.com/Pluto-ty/Praticando-templates/tree/main/iniciante/3-column-preview-card"
+                              class="u-btn-git"
+                              >GitHub</a
+                           >
+                        </div>
+                     </div>
+                  </div>
+                  <!-- Profile card component -->
+                  <div class="u-project">
+                     <img
+                        class="image"
+                        src="./iniciante/profile-card-component-main/images/readme/web.PNG"
+                        alt=""
+                     />
+                     <div class="u-project-content bg-1">
+                        <div>
+                           <h3>Profile card component</h3>
+                           <p>
+                              Flexbox é um template feito para trinar flexbox
+                              como o próprio nome diz, feito com todos os seus
+                              princípios de flexibilidade para criar um layout
+                              responsivo para todos os tipos de dispositivos.
+                           </p>
+                        </div>
+                        <div class="u-buttons">
+                           <a
+                              target="_blank"
+                              href="./iniciante/profile-card-component-main/index.html"
+                              class="u-btn-site"
+                              >Site</a
+                           >
+                           <a
+                              target="_blank"
+                              href="https://github.com/Pluto-ty/Praticando-templates/tree/main/iniciante/profile-card-component-main"
+                              class="u-btn-git"
+                              >GitHub</a
+                           >
+                        </div>
                      </div>
                   </div>
 
-                  <div class="c-project">
-                     <div class="c-images">
-                        <img
-                           class="c-desktop-img"
-                           src="./iniciante/3-column-preview-card/images/readme/web.png"
-                           alt=""
-                        />
-                        <img
-                           class="c-mobile-img"
-                           src="./iniciante/3-column-preview-card/images/readme/mobile.jpg"
-                           alt=""
-                        />
+                  <!-- Preview de artigo -->
+                  <div class="u-project">
+                     <img
+                        class="image"
+                        src="./iniciante/article-preview-component-master/images/readme/web.PNG"
+                        alt=""
+                     />
+                     <div class="u-project-content bg-1">
+                        <div>
+                           <h3>Preview de artigo</h3>
+                           <p></p>
+                        </div>
+                        <div class="u-buttons">
+                           <a
+                              target="_blank"
+                              href="./iniciante/article-preview-component-master/index.html"
+                              class="u-btn-site"
+                              >Site</a
+                           >
+                           <a
+                              target="_blank"
+                              href="https://github.com/ThyagoAraujoM/Praticando-templates/tree/main/iniciante/article-preview-component-master"
+                              class="u-btn-git"
+                              >GitHub</a
+                           >
+                        </div>
                      </div>
-                     <div class="c-content">
-                        <p>3 column preview card</p>
-                        <ul class="u-button-container">
-                           <li class="u-button">
-                              <a
-                                 target="_blank"
-                                 href="./iniciante/3-column-preview-card/index.html"
-                                 >Site</a
-                              >
-                           </li>
-                           <li class="u-button">
-                              <a
-                                 target="_blank"
-                                 href="https://github.com/Pluto-ty/Praticando-templates/tree/main/iniciante/3-column-preview-card"
-                                 >Repo</a
-                              >
-                           </li>
-                        </ul>
+                  </div>
+                  <!-- Landing Page com captação de email -->
+                  <div class="u-project">
+                     <img
+                        class="image"
+                        src="./iniciante/base-apparel-coming-soon-master/images/readme/web.PNG"
+                        alt=""
+                     />
+                     <div class="u-project-content bg-2">
+                        <div>
+                           <h3>Landing Page com captação de email</h3>
+                           <p></p>
+                        </div>
+                        <div class="u-buttons">
+                           <a
+                              target="_blank"
+                              href="./iniciante/base-apparel-coming-soon-master/index.html"
+                              class="u-btn-site"
+                              >Site</a
+                           >
+                           <a
+                              target="_blank"
+                              href="https://github.com/ThyagoAraujoM/Praticando-templates/tree/main/iniciante/base-apparel-coming-soon-master"
+                              class="u-btn-git"
+                              >GitHub</a
+                           >
+                        </div>
+                     </div>
+                  </div>
+                  <!-- Bin2Dec -->
+                  <div class="u-project">
+                     <img
+                        class="image"
+                        src="./iniciante/bin2Dec/readme/web.PNG"
+                        alt=""
+                     />
+                     <div class="u-project-content bg-1">
+                        <div>
+                           <h3>
+                              Bin2Dec (Convertor de número binário para decimal)
+                           </h3>
+                           <p></p>
+                        </div>
+                        <div class="u-buttons">
+                           <a
+                              target="_blank"
+                              href="./iniciante/bin2Dec/index.html"
+                              class="u-btn-site"
+                              >Site</a
+                           >
+                           <a
+                              target="_blank"
+                              href="https://github.com/ThyagoAraujoM/Praticando-templates/tree/main/iniciante/bin2Dec"
+                              class="u-btn-git"
+                              >GitHub</a
+                           >
+                        </div>
                      </div>
                   </div>
 
-                  <div class="c-project">
-                     <div class="c-images">
-                        <img
-                           class="c-desktop-img"
-                           src="./iniciante/profile-card-component-main/images/readme/web.PNG"
-                           alt=""
-                        />
-                        <img
-                           class="c-mobile-img"
-                           src="./iniciante/profile-card-component-main/images/readme/mobile.PNG"
-                           alt=""
-                        />
+                  <!-- Calculadora -->
+                  <div class="u-project">
+                     <img
+                        class="image"
+                        src="./iniciante/Calculator/readme/web.png"
+                        alt=""
+                     />
+                     <div class="u-project-content bg-1">
+                        <div>
+                           <h3>Calculadora</h3>
+                           <p></p>
+                        </div>
+                        <div class="u-buttons">
+                           <a
+                              target="_blank"
+                              href="./iniciante/Calculator/index.html"
+                              class="u-btn-site"
+                              >Site</a
+                           >
+                           <a
+                              target="_blank"
+                              href="https://github.com/ThyagoAraujoM/Praticando-templates/tree/main/iniciante/Calculator"
+                              class="u-btn-git"
+                              >GitHub</a
+                           >
+                        </div>
                      </div>
-                     <div class="c-content">
-                        <p>Profile card component</p>
-                        <ul class="u-button-container">
-                           <li class="u-button">
-                              <a
-                                 target="_blank"
-                                 href="./iniciante/profile-card-component-main/index.html"
-                                 >Site</a
-                              >
-                           </li>
-                           <li class="u-button">
-                              <a
-                                 target="_blank"
-                                 href="https://github.com/Pluto-ty/Praticando-templates/tree/main/iniciante/profile-card-component-main"
-                                 >Repo</a
-                              >
-                           </li>
-                        </ul>
+                  </div>
+                  <!-- Luzes de natal -->
+                  <div class="u-project">
+                     <img
+                        class="image"
+                        src="./iniciante/Christmas-light/readme/web.gif"
+                        alt=""
+                     />
+                     <div class="u-project-content bg-2">
+                        <div>
+                           <h3>Luzes de Natal</h3>
+                           <p></p>
+                        </div>
+                        <div class="u-buttons">
+                           <a
+                              target="_blank"
+                              href="./iniciante/Christmas-light/index.html"
+                              class="u-btn-site"
+                              >Site</a
+                           >
+                           <a
+                              target="_blank"
+                              href="https://github.com/ThyagoAraujoM/Praticando-templates/tree/main/iniciante/Christmas-light"
+                              class="u-btn-git"
+                              >GitHub</a
+                           >
+                        </div>
+                     </div>
+                  </div>
+                  <!-- Single price grid -->
+                  <div class="u-project">
+                     <img
+                        class="image"
+                        src="./iniciante/single-price-grid-component-master/images/readme/web.jpg"
+                        alt=""
+                     />
+                     <div class="u-project-content bg-1">
+                        <div>
+                           <h3>Single price grid</h3>
+                           <p></p>
+                        </div>
+                        <div class="u-buttons">
+                           <a
+                              target="_blank"
+                              href="./iniciante/single-price-grid-component-master/index.html"
+                              class="u-btn-site"
+                              >Site</a
+                           >
+                           <a
+                              target="_blank"
+                              href="https://github.com/ThyagoAraujoM/Praticando-templates/tree/main/iniciante/single-price-grid-component-master"
+                              class="u-btn-git"
+                              >GitHub</a
+                           >
+                        </div>
                      </div>
                   </div>
 
-                  <div class="c-project">
-                     <div class="c-images">
-                        <img
-                           class="c-desktop-img"
-                           src="./iniciante/faq-accordion-card-main/images/readme/web.PNG"
-                           alt=""
-                        />
-                        <img
-                           class="c-mobile-img"
-                           src="./iniciante/faq-accordion-card-main/images/readme/mobile.PNG"
-                           alt=""
-                        />
+                  <!-- Sign up form -->
+                  <div class="u-project">
+                     <img
+                        class="image"
+                        src="./iniciante/signup-form/images/readme/web.jpg"
+                        alt=""
+                     />
+                     <div class="u-project-content bg-1">
+                        <div>
+                           <h3>Sign up form</h3>
+                           <p></p>
+                        </div>
+                        <div class="u-buttons">
+                           <a
+                              target="_blank"
+                              href="./iniciante/signup-form/index.html"
+                              class="u-btn-site"
+                              >Site</a
+                           >
+                           <a
+                              target="_blank"
+                              href="https://github.com/ThyagoAraujoM/Praticando-templates/tree/main/iniciante/signup-form"
+                              class="u-btn-git"
+                              >GitHub</a
+                           >
+                        </div>
                      </div>
-                     <div class="c-content">
-                        <p>Cartão FAQ card</p>
-                        <ul class="u-button-container">
-                           <li class="u-button">
-                              <a
-                                 target="_blank"
-                                 href="./iniciante/faq-accordion-card-main/index.html"
-                                 >Site</a
-                              >
-                           </li>
-                           <li class="u-button">
-                              <a
-                                 target="_blank"
-                                 href="https://github.com/ThyagoAraujoM/Praticando-templates/tree/main/iniciante/faq-accordion-card-main"
-                                 >Repo</a
-                              >
-                           </li>
-                        </ul>
+                  </div>
+                  <!-- Ping coming soon page -->
+                  <div class="u-project">
+                     <img
+                        class="image"
+                        src="./iniciante/ping-coming-soon-page-master/images/readme/web.jpg"
+                        alt=""
+                     />
+                     <div class="u-project-content bg-2">
+                        <div>
+                           <h3>Ping coming soon page</h3>
+                           <p></p>
+                        </div>
+                        <div class="u-buttons">
+                           <a
+                              target="_blank"
+                              href="./iniciante/ping-coming-soon-page-master/index.html"
+                              class="u-btn-site"
+                              >Site</a
+                           >
+                           <a
+                              target="_blank"
+                              href="https://github.com/ThyagoAraujoM/Praticando-templates/tree/main/iniciante/ping-coming-soon-page-master"
+                              class="u-btn-git"
+                              >GitHub</a
+                           >
+                        </div>
+                     </div>
+                  </div>
+                  <!-- Huddle landing page -->
+                  <div class="u-project">
+                     <img
+                        class="image"
+                        src="./iniciante/huddle-landing-page/images/readme/web.jpg"
+                        alt=""
+                     />
+                     <div class="u-project-content bg-1">
+                        <div>
+                           <h3>Huddle landing page</h3>
+                           <p></p>
+                        </div>
+                        <div class="u-buttons">
+                           <a
+                              target="_blank"
+                              href="./iniciante/huddle-landing-page/index.html"
+                              class="u-btn-site"
+                              >Site</a
+                           >
+                           <a
+                              target="_blank"
+                              href="https://github.com/ThyagoAraujoM/Praticando-templates/tree/main/iniciante/huddle-landing-page"
+                              class="u-btn-git"
+                              >GitHub</a
+                           >
+                        </div>
                      </div>
                   </div>
 
-                  <div class="c-project">
-                     <div class="c-images">
-                        <img
-                           class="c-desktop-img"
-                           src="./iniciante/article-preview-component-master/images/readme/web.PNG"
-                           alt=""
-                        />
-                        <img
-                           class="c-mobile-img"
-                           src="./iniciante/article-preview-component-master/images/readme/mobile.gif"
-                           alt=""
-                        />
-                     </div>
-                     <div class="c-content">
-                        <p>Preview de artigo</p>
-                        <ul class="u-button-container">
-                           <li class="u-button">
-                              <a
-                                 target="_blank"
-                                 href="./iniciante/article-preview-component-master/index.html"
-                                 >Site</a
-                              >
-                           </li>
-                           <li class="u-button">
-                              <a
-                                 target="_blank"
-                                 href="https://github.com/ThyagoAraujoM/Praticando-templates/tree/main/iniciante/article-preview-component-master"
-                                 >Repo</a
-                              >
-                           </li>
-                        </ul>
-                     </div>
-                  </div>
-
-                  <div class="c-project">
-                     <div class="c-images">
-                        <img
-                           class="c-desktop-img"
-                           src="./iniciante/social-proof-section-master/images/readme/web.PNG"
-                           alt=""
-                        />
-                        <img
-                           class="c-mobile-img"
-                           src="./iniciante/social-proof-section-master/images/readme/mobile.gif"
-                           alt=""
-                        />
-                     </div>
-                     <div class="c-content">
-                        <p>Template de Avaliações</p>
-                        <ul class="u-button-container">
-                           <li class="u-button">
-                              <a
-                                 target="_blank"
-                                 href="./iniciante/social-proof-section-master/index.html"
-                                 >Site</a
-                              >
-                           </li>
-                           <li class="u-button">
-                              <a
-                                 target="_blank"
-                                 href="https://github.com/ThyagoAraujoM/Praticando-templates/tree/main/iniciante/social-proof-section-master/index.html"
-                                 >Repo</a
-                              >
-                           </li>
-                        </ul>
-                     </div>
-                  </div>
-                  <div class="c-project">
-                     <div class="c-images">
-                        <img
-                           class="c-desktop-img"
-                           src="./iniciante/base-apparel-coming-soon-master/images/readme/web.PNG"
-                           alt=""
-                        />
-                        <img
-                           class="c-mobile-img"
-                           src="./iniciante/base-apparel-coming-soon-master/images/readme/mobile.PNG"
-                           alt=""
-                        />
-                     </div>
-                     <div class="c-content">
-                        <p>Landing Page com captação de email</p>
-                        <ul class="u-button-container">
-                           <li class="u-button">
-                              <a
-                                 target="_blank"
-                                 href="./iniciante/base-apparel-coming-soon-master/index.html"
-                                 >Site</a
-                              >
-                           </li>
-                           <li class="u-button">
-                              <a
-                                 target="_blank"
-                                 href="https://github.com/ThyagoAraujoM/Praticando-templates/tree/main/iniciante/base-apparel-coming-soon-master"
-                                 >Repo</a
-                              >
-                           </li>
-                        </ul>
-                     </div>
-                  </div>
-                  <div class="c-project">
-                     <div class="c-images">
-                        <img
-                           class="c-desktop-img"
-                           src="./iniciante/bin2Dec/readme/web.PNG"
-                           alt=""
-                        />
-                     </div>
-                     <div class="c-content">
-                        <p>
-                           Bin2Dec (Convertor de número binário para decimal)
-                        </p>
-                        <ul class="u-button-container">
-                           <li class="u-button">
-                              <a
-                                 target="_blank"
-                                 href="./iniciante/bin2Dec/index.html"
-                                 >Site</a
-                              >
-                           </li>
-                           <li class="u-button">
-                              <a
-                                 target="_blank"
-                                 href="https://github.com/ThyagoAraujoM/Praticando-templates/tree/main/iniciante/bin2Dec"
-                                 >Repo</a
-                              >
-                           </li>
-                        </ul>
-                     </div>
-                  </div>
-                  <div class="c-project">
-                     <div class="c-images">
-                        <img
-                           class="c-desktop-img"
-                           src="./iniciante/Border-radius-Previewer/readme/web.png"
-                           alt=""
-                        />
-                     </div>
-                     <div class="c-content">
-                        <p>Border radius previewer</p>
-                        <ul class="u-button-container">
-                           <li class="u-button">
-                              <a
-                                 target="_blank"
-                                 href="./iniciante/Border-radius-Previewer/index.html"
-                                 >Site</a
-                              >
-                           </li>
-                           <li class="u-button">
-                              <a
-                                 target="_blank"
-                                 href="https://github.com/ThyagoAraujoM/Praticando-templates/tree/main/iniciante/Border-radius-Previewer"
-                                 >Repo</a
-                              >
-                           </li>
-                        </ul>
-                     </div>
-                  </div>
-                  <div class="c-project">
-                     <div class="c-images">
-                        <img
-                           class="c-desktop-img"
-                           src="./iniciante/Calculator/readme/web.png"
-                           alt=""
-                        />
-                     </div>
-                     <div class="c-content">
-                        <p>Calculadora básica</p>
-                        <ul class="u-button-container">
-                           <li class="u-button">
-                              <a
-                                 target="_blank"
-                                 href="./iniciante/Calculator/index.html"
-                                 >Site</a
-                              >
-                           </li>
-                           <li class="u-button">
-                              <a
-                                 target="_blank"
-                                 href="https://github.com/ThyagoAraujoM/Praticando-templates/tree/main/iniciante/Calculator"
-                                 >Repo</a
-                              >
-                           </li>
-                        </ul>
-                     </div>
-                  </div>
-                  <div class="c-project">
-                     <div class="c-images">
-                        <img
-                           class="c-desktop-img"
-                           src="./iniciante/four-card-feature-section-master/images/readme/web.jpg"
-                           alt=""
-                        />
-                     </div>
-                     <div class="c-content">
-                        <p>Four Card page</p>
-                        <ul class="u-button-container">
-                           <li class="u-button">
-                              <a
-                                 target="_blank"
-                                 href="./iniciante/four-card-feature-section-master/index.html"
-                                 >Site</a
-                              >
-                           </li>
-                           <li class="u-button">
-                              <a
-                                 target="_blank"
-                                 href="https://github.com/ThyagoAraujoM/Praticando-templates/tree/main/iniciante/four-card-feature-section-master"
-                                 >Repo</a
-                              >
-                           </li>
-                        </ul>
-                     </div>
-                  </div>
-                  <div class="c-project">
-                     <div class="c-images">
-                        <img
-                           class="c-desktop-img"
-                           src="./iniciante/huddle-landing-page/images/readme/web.jpg"
-                           alt=""
-                        />
-                        <img
-                           class="c-mobile-img"
-                           src="./iniciante/huddle-landing-page/images/readme/mobile.jpg"
-                           alt=""
-                        />
-                     </div>
-                     <div class="c-content">
-                        <p>Huddle landing page</p>
-                        <ul class="u-button-container">
-                           <li class="u-button">
-                              <a
-                                 target="_blank"
-                                 href="./iniciante/huddle-landing-page/index.html"
-                                 >Site</a
-                              >
-                           </li>
-                           <li class="u-button">
-                              <a
-                                 target="_blank"
-                                 href="https://github.com/ThyagoAraujoM/Praticando-templates/tree/main/iniciante/huddle-landing-page"
-                                 >Repo</a
-                              >
-                           </li>
-                        </ul>
-                     </div>
-                  </div>
-                  <div class="c-project">
-                     <div class="c-images">
-                        <img
-                           class="c-desktop-img"
-                           src="./iniciante/ping-coming-soon-page-master/images/readme/web.jpg"
-                           alt=""
-                        />
-                        <img
-                           class="c-mobile-img"
-                           src="./iniciante/ping-coming-soon-page-master/images/readme/mobile.jpg"
-                           alt=""
-                        />
-                     </div>
-                     <div class="c-content">
-                        <p>Ping coming soon page</p>
-                        <ul class="u-button-container">
-                           <li class="u-button">
-                              <a
-                                 target="_blank"
-                                 href="./iniciante/ping-coming-soon-page-master/index.html"
-                                 >Site</a
-                              >
-                           </li>
-                           <li class="u-button">
-                              <a
-                                 target="_blank"
-                                 href="https://github.com/ThyagoAraujoM/Praticando-templates/tree/main/iniciante/ping-coming-soon-page-master"
-                                 >Repo</a
-                              >
-                           </li>
-                        </ul>
-                     </div>
-                  </div>
-                  <div class="c-project">
-                     <div class="c-images">
-                        <img
-                           class="c-desktop-img"
-                           src="./iniciante/signup-form/images/readme/web.jpg"
-                           alt=""
-                        />
-                        <img
-                           class="c-mobile-img"
-                           src="./iniciante/signup-form/images/readme/mobile.jpg"
-                           alt=""
-                        />
-                     </div>
-                     <div class="c-content">
-                        <p>Sign up form</p>
-                        <ul class="u-button-container">
-                           <li class="u-button">
-                              <a
-                                 target="_blank"
-                                 href="./iniciante/signup-form/index.html"
-                                 >Site</a
-                              >
-                           </li>
-                           <li class="u-button">
-                              <a
-                                 target="_blank"
-                                 href="https://github.com/ThyagoAraujoM/Praticando-templates/tree/main/iniciante/signup-form"
-                                 >Repo</a
-                              >
-                           </li>
-                        </ul>
-                     </div>
-                  </div>
-                  <div class="c-project">
-                     <div class="c-images">
-                        <img
-                           class="c-desktop-img"
-                           src="./iniciante/single-price-grid-component-master/images/readme/web.jpg"
-                           alt=""
-                        />
-                        <img
-                           class="c-mobile-img"
-                           src="./iniciante/single-price-grid-component-master/images/readme/mobile.jpg"
-                           alt=""
-                        />
-                     </div>
-                     <div class="c-content">
-                        <p>Single price grid</p>
-                        <ul class="u-button-container">
-                           <li class="u-button">
-                              <a
-                                 target="_blank"
-                                 href="./iniciante/single-price-grid-component-master/index.html"
-                                 >Site</a
-                              >
-                           </li>
-                           <li class="u-button">
-                              <a
-                                 target="_blank"
-                                 href="https://github.com/ThyagoAraujoM/Praticando-templates/tree/main/iniciante/single-price-grid-component-master"
-                                 >Repo</a
-                              >
-                           </li>
-                        </ul>
-                     </div>
-                  </div>
-                  <div class="c-project">
-                     <div class="c-images">
-                        <img
-                           class="c-desktop-img"
-                           src="./iniciante/tip-calculator-app-main/images/readme/web.jpg"
-                           alt=""
-                        />
-                        <img
-                           class="c-mobile-img"
-                           src="./iniciante/tip-calculator-app-main/images/readme/mobile.jpg"
-                           alt=""
-                        />
-                     </div>
-                     <div class="c-content">
-                        <p>Tip calculator App</p>
-                        <ul class="u-button-container">
-                           <li class="u-button">
-                              <a
-                                 target="_blank"
-                                 href="./iniciante/tip-calculator-app-main/index.html"
-                                 >Site</a
-                              >
-                           </li>
-                           <li class="u-button">
-                              <a
-                                 target="_blank"
-                                 href="https://github.com/ThyagoAraujoM/Praticando-templates/tree/main/iniciante/tip-calculator-app-main"
-                                 >Repo</a
-                              >
-                           </li>
-                        </ul>
-                     </div>
-                  </div>
-                  <div class="c-project">
-                     <div class="c-images">
-                        <img
-                           class="c-desktop-img"
-                           src="./iniciante/Christmas-light/readme/web.gif"
-                           alt=""
-                        />
-                     </div>
-                     <div class="c-content">
-                        <p>Luzes de Natal</p>
-                        <ul class="u-button-container">
-                           <li class="u-button">
-                              <a
-                                 target="_blank"
-                                 href="./iniciante/Christmas-light/index.html"
-                                 >Site</a
-                              >
-                           </li>
-                           <li class="u-button">
-                              <a
-                                 target="_blank"
-                                 href="https://github.com/ThyagoAraujoM/Praticando-templates/tree/main/iniciante/Christmas-light"
-                                 >Repo</a
-                              >
-                           </li>
-                        </ul>
+                  <!-- Four Card page -->
+                  <div class="u-project">
+                     <img
+                        class="image"
+                        src="./iniciante/four-card-feature-section-master/images/readme/web.jpg"
+                        alt=""
+                     />
+                     <div class="u-project-content bg-1">
+                        <div>
+                           <h3>Four Card page</h3>
+                           <p></p>
+                        </div>
+                        <div class="u-buttons">
+                           <a
+                              target="_blank"
+                              href="./iniciante/four-card-feature-section-master/index.html"
+                              class="u-btn-site"
+                              >Site</a
+                           >
+                           <a
+                              target="_blank"
+                              href="https://github.com/ThyagoAraujoM/Praticando-templates/tree/main/iniciante/four-card-feature-section-master"
+                              class="u-btn-git"
+                              >GitHub</a
+                           >
+                        </div>
                      </div>
                   </div>
                </div>
-               <img class="c-arrow" src="./assets/seta.svg" alt="" />
-            </div>
+               <img
+                  onclick="arrow.rightArrow()"
+                  src="./assets/arrow-right.png"
+                  alt=""
+               />
+            </section>
          </main>
-         <footer>
-            <a
-               href="https://github.com/ThyagoAraujoM/Praticando-templates"
-               target="_blank"
-            >
-               <img src="./assets/Github.svg" alt="Imagem github" />
-            </a>
-            <a href="https://thyagoaraujom.github.io/portfolio/">
-               <img src="./assets/Home.svg" alt="Imagem Início" />
-            </a>
-         </footer>
       </div>
       <script src="./script.js"></script>
    </body>
